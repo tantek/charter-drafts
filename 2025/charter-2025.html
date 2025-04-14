@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+
+    <title>[DRAFT] Web Payments Working Group Charter</title>
+    
+    <link rel="stylesheet" href="https://www.w3.org/2005/10/w3cdoc.css" type="text/css" media="screen">
+    <link rel="stylesheet" type="text/css" href="https://www.w3.org/OldGuide/pubrules-style.css">
+    <link rel="stylesheet" type="text/css" href="https://www.w3.org/2006/02/charter-style.css">
+    <style>
+      main {
+        max-width: 60em;
+        margin: 0 auto;
+      }
+
+      ul#navbar {
+        font-size: small;
+      }
+
+      dt.spec {
+        font-weight: bold;
+      }
+
+      dt.spec new {
+        background: yellow;
+      }
+
+      ul.out-of-scope > li {
+        font-weight: bold;
+      }
+
+      ul.out-of-scope > li > ul > li{
+        font-weight: normal;
+      }
+
+      .issue {
+        background: cornsilk;
+        font-style: italic;
+      }
+
+      .todo {
+        color: #900;
+      }
+
+      footer {
+        font-size: small;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header">
+      <aside>
+        <ul id="navbar">
+          <li><a href="#background">Background</a></li>
+          <li><a href="#scope">Scope</a></li>
+          <li><a href="#deliverables">Deliverables</a></li>
+          <li><a href="#success-criteria">Success Criteria</a></li>
+          <li><a href="#coordination">Coordination</a></li>
+          <li><a href="#participation">Participation</a></li>
+          <li><a href="#communication">Communication</a></li>
+          <li><a href="#decisions">Decision Policy</a></li>
+          <li><a href="#patentpolicy">Patent Policy</a></li>
+          <li><a href="#patentpolicy">Patent Disclosures</a></li>
+          <li><a href="#licensing">Licensing</a></li>
+          <li><a href="#about">About this Charter</a></li>
+        </ul>
+      </aside>
+      <p>
+        <a href="https://www.w3.org/"><img alt="W3C" height="48" src="https://www.w3.org/Icons/w3c_home" width="72"></a>
+      </p>
+    </header>
+
+
+    <main>
+      <h1 id="title">[DRAFT] Web Payments Working Group Charter</h1>      
+      <!-- replace DRAFT with PROPOSED when the AC review starts -->
+      <!-- delete PROPOSED after AC review completed -->
+
+      <p class="mission">
+        The mission of the <a href="https://www.w3.org/groups/wg/payments">Web Payments Working
+          Group</a> is to make consumer retail payments easier and more secure on the Web.</p>
+
+      <div class="noprint">
+        <p class="join">
+          <a href="https://www.w3.org/groups/wg/payments/join">Join the Web
+          Payments Working Group</a>.
+        </p>
+      </div>
+
+      <!-- replace "draft charter" with "proposed charter" when the AC review starts -->
+
+      <div id="details">
+        <table class="summary-table">
+          <tr id="Status">
+            <th>
+              Charter Status
+            </th>
+            <td>
+              See the <a href="https://www.w3.org/groups/wg/payments/charters/">group status page</A> and <a href="#history">detailed change history</a>.
+            </td>
+          </tr>
+          <tr id="Duration">
+            <th>
+              Start date
+            </th>
+            <td>
+              <i class="todo">[dd monthname yyyy] (date of the "Call for Participation", when the charter is approved)</i>
+            </td>
+          </tr>
+          <tr id="CharterEnd">
+            <th>
+              End date
+            </th>
+            <td>
+              <i class="todo">[dd monthname yyyy]</i> (Start date + 2 years)
+            </td>
+          </tr>
+          <tr>
+            <th>
+              Chairs
+            </th>
+            <td>
+	    Gerhard Oosthuizen (Entersekt); 
+            Praveena Subrahmanyam (Airbnb); Nick Telford-Reed, Invited Expert
+            </td>
+          </tr>
+          <tr>
+            <th>
+              Team Contacts
+            </th>
+            <td>
+            Ian Jacobs (FTE %: 40%)
+            </td>
+          </tr>
+          <tr>
+            <th>
+              Meeting Schedule
+            </th>
+            <td>
+            Teleconferences: Every two weeks<br>
+            Face-to-face: Typically 1 per year
+            </td>
+          </tr>
+        </table>
+
+      </div>
+
+      <div id="background" class="background">
+        <h2>Motivation and Background</h2>
+
+	<p>A number of recent phenomena and changes to the Web payments ecosystem have shaped this version of the Web Payments Working Group charter, including:</p>
+	<ul>
+	  <li>Regulatory requirements that impact payments (e.g., related to strong authentication, for digital wallets to address both identity and payments use cases). The Working Group seeks to enhance Web payments to align with regulatory requirements.</li>
+	  <li>Growing ecommerce fraud and new kinds of frauds and scams. At the same time, changes to user agent capabilities (e.g., related to cookies, user agent strings, IP addresses, etc.) have an impact on returning user recognition and fraud mitigation. The Working Group seeks to lower fraud through new browser and OS risk signals that protect user privacy.  </li>
+	  <li>Market expectation of lower friction during checkout to reduce
+	    abandonment. The Working Group seeks to improve the user experience through new user agent capabilities designed specifically for payments.</li>
+	  <li>Evolving user expectations regarding biometrics on mobile devices; users increasingly view them favorably and as providing enhanced security. The Working Group build on Web Authentication, which is now widely available.</li>
+	</ul>
+
+	<h3>Wallets</h3>
+
+	<p>When this group was first chartered 10 years ago, W3C's
+	  vision was that digital wallets could simultaneously improve
+	  the usability, security, and privacy of payments on the
+	  Web. The Working Group developed and standardized APIs to
+	  streamline Web checkout by making it easier for users to
+	  interact with both Web-based and native "payment apps"
+	  (essentially digital
+	  wallets): <a href="https://w3c.github.io/payment-method-id/">Payment
+	  Method
+	  Identifiers</a>, <a href="https://w3c.github.io/payment-request/">Payment
+	  Request
+	  API</a>, <a href="https://w3c.github.io/payment-handler/">Payment
+	  Handler API</a>,
+	  and <a href="https://w3c.github.io/payment-method-manifest/">Payment
+	  Method Manifest</a>. These APIs have seen modest adoption,
+	  but have not yet resulted in a diverse ecosystem of payment
+	  apps.</p>
+
+	<p>In recent years, however, the European Commission has
+	renewed the community's interest in digital wallets as a
+	result
+	of <a href="https://digital-strategy.ec.europa.eu/en/policies/eudi-regulation">European
+	Digital Identity (EUDI) Regulation</a>. This regulation has
+	led to a "parallel track" for wallets on the Web via APIs
+	incubated by several collaborating organizations, including
+	W3C (e.g.,
+	the <a href="https://wicg.github.io/digital-credentials/">Digital
+	Credentials
+	API</a>, <a href="https://www.w3.org/TR/vc-data-model/">Verifiable
+	Credentials Data Model</a>), the OpenID Foundation, the FIDO
+	Alliance, the IETF, ISO, and others. This new push for digital
+	wallets appears to be primarily aimed at supporting digital
+	identity use cases (e.g., presentation of government issued
+	  credentials for authentication scenarios), but the project does
+	  extend to payments use cases (e.g., where someone wishes to present a
+	proof of age credential alongside a payment
+	  credential). Although this new digital identity ecosystem is still in the early stages, there are encouraging signals of future interoperability across users agents such as shipping code and public expressions of intent to prototype.</p>
+
+	<h3>Strong Authentication</h3>
+
+	<p>Both tracks for bringing wallets to the Web include the ability of a site (such as a merchant Web site) to request credentials via the user agent, and the user consenting to return selected credentials to the site. Both tracks also involve <strong>strong authentication capabilities</strong>.</p>
+
+	<p>To address strong authentication needs (and reduce reliance on phishable SMS OTP), this Working Group has developed Secure Payment Confirmation, an API to improve the usability, security, and privacy of strong authentication for Web payments. This API depends today on valuable features enabled by Web Authentication and CTAP, including biometric authentication, cross-device support, and digital signature capabilities. While the Web Authentication has effectively evolved for login use cases (via <strong>synched passkeys</strong>), SPC has evolved simultaneously to meet payments ecosystem requirements not met through Web Authentication alone. In particular:</p>
+
+	<ul>
+	  <li>SPC provides a modal window for the user to agree to transaction details. The browser passes the displayed information directly to the authenticator to be signed. The authentication results can play a role in providing cryptographic evidence of user agreement ("transaction confirmation" or "dynamic linking") to the transaction details, as required by some regulation (e.g., PSD2 in Europe). 
+	  <li>Synched passkeys remove "device bound" possession factor that is often required by payments regulators. SPC adds back a device bound factor to complement the passkey.</li>
+	  <li>For most merchants, payments are handled by third parties who frequently operate from code running in an iframe. In addition, some payment system rules (e.g., from the PCI Security Standards Council) reinforce the desire to separate the merchant context from the payment context. For this reason, SPC has enabled both credential creation and authentication from an iframe. This behavior initially deviated from Web Authentication behavior, but Web Authentication has evolved in L2 and L3 to align with SPC behavior.</li>
+	  <li>Whereas Web Authentication limits credential usage to the relying party that created the credential, SPC allows other parties to use another relying party's credentials (with their permission). This decoupling of "authentication ceremony" from "validation of the results" enables a variety of arrangements among various payment ecosystem stakeholders, such as (but not limited to):
+	    <ul>
+	      <li>Bank-initiated authentication using their own credential</li>
+	      <li>Merchant-initiated authentication using a bank's credential, where the results are sent to the bank on the backend for validation.</li>
+	      <li>Merchant-initiated authentication using a merchant's own credential or one owned by their payment service provider (i.e., "delegated authentication").</li>
+	    </ul>
+	    <p>As one example of the diversity of SPC-supported flows, the EMV® 3-D Secure specification refers normatively to SPC and leverages this "decoupling" feature of SPC to enable multiple flows.</p>
+	  </li>
+	</ul>
+
+	<p>The community is thus pursuing two tracks in parallel related to credential exchange and authentication. This raises several questions:</p>
+
+	<ul>
+	  <li>If adopted interoperably, would the new digital wallet APIs subsume the functionality of Payment Request, Web Authentication, and SPC? Or would they be complementary? For example, one set of standards might more readily support use cases involving strong national identity credentials, while the other might support lighterweight authentication scenarios or be more useful in environments where wallets are fragmented or not widely adopted.</li>
+	  <li>If the two tracks both prove relevant for different use cases, can they be aligned in some ways for the benefit of developers? For example, could they share argument lists?</li>
+	</ul>
+
+	<h3>Support for diverse payment systems</h3>	
+
+	<p>Beyond the work on digital wallets coming out of the European Commision push, the Working Group recognizes that there are large ecosystems of payment systems, particularly outside of North America and Europe, that are not being served by its current set of APIs. For example, some payment systems rely on 'push' payment from the payment system to a merchant with minimal integration required from the merchant (including no JavaScript). These payment systems may also have different requirements for fraud protection, both due to technical differences in the payment system as well as fraud realities on the ground. Although the Working Group periodically discusses these other payment systems, the users of these payment systems, and the merchants and payment organizations involved in these ecosystems, should be better supported by user agents and this Working Group.</p>
+
+	<p>These are the topics and questions that we intend to discuss in this iteration of the Working Group's charter.</p>
+      </div>
+
+      <section id="scope" class="scope">
+        <h2>Scope</h2>
+
+	<ul>
+	  <li><strong>Digital wallets, identity, and payments</strong>: this relates both to maintaining and enhancing the group's existing approaches to payment apps, and to conversations about other approaches for bringing digital wallets to the Web for use cases related to identity and payments.</li>
+	  <li><strong>Authentication</strong>:
+	    authentication &mdash;including strong customer authentication&mdash; for a selected payment instrument. This Working Group coordinates closely with the Web Authentication Working Group.</li>
+	  <li><strong>User identification</strong>: simplifying user access to
+	    accounts and payment instruments while protecting user privacy.</li>
+	</ul>
+
+	<p>The Working Group seeks to develop technologies that can be
+	  used with a wide variety of payment methods, including card
+	  payments, credit transfers, open banking architectures,
+	  proprietary payment methods, and mobile wallets. See the
+	  section on <a href="#coordination">Coordination</a> for a
+	  list of Working Group relationships that inform
+	  discussions.</p>
+	
+        <section id="section-out-of-scope">
+          <h3 id="out-of-scope">Out of Scope</h3>
+            <p>The following features are out of scope, and will not be addressed by this Working Group.</p>
+
+            <ul>
+	      <li>User interface specifics are out of scope; this Working Group is chartered to Recommend programming interfaces, not user interface specifics. However, it is in scope for the Working Group to discuss user experience, for example as part of understanding user journeys during a checkout experience.
+	      </li>
+	      <li>How digital payment schemes register and communicate with payment instruments.  Here, a "digital payment scheme" is a set of rules for the execution of payment transactions that are followed by adhering entities (payment service providers, processors, issuers, acquirers, payers and payees). A payment instrument is an account, token, or other means of fulfilling the payment provider&#8217;s role in a digital payment scheme. Some digital payment schemes make internal use of payment instruments from other payment schemes.</li>
+            </ul>
+        </section>
+
+      </section>
+
+      <section id="deliverables">
+        <h2>
+          Deliverables
+        </h2>
+
+	<p>Updated document status is available on
+        the <a href="https://www.w3.org/groups/wg/payments/publications">group
+        publication status page</a>.</p>
+
+        <p><i>Draft state</i> indicates the state of the deliverable at the time of the charter approval.</p>
+
+        <section id="normative">
+          <h3>
+            Normative Specifications
+          </h3>
+          <p>
+            The Working Group will deliver the following W3C normative specification.</p>
+          <dl>
+            <dt id="spc" class="spec"><a href="https://w3c.github.io/secure-payment-confirmation/">Secure Payment Confirmation</a></dt>
+            <dd>
+              <p>Secure Payment Confirmation (SPC) is a Web API to support streamlined authentication during a payment transaction. It is designed to scale authentication across merchants, to be used within a wide range of authentication protocols, and to produce cryptographic evidence that the user has confirmed transaction details.</p>
+
+              <p class="draft-status"><b>Draft state:</b> <a href="https://www.w3.org/policies/process/#RecsCR">Candidate Recommendation</a>. The Working Group is enhancing support for a device-bound signal and seeking additional implementations.
+	      </p>
+	      <p class="milestone"><b>Expected completion:</b> Q4 2026</p>
+	      <p><b>Latest publication:</b> <a href='https://www.w3.org/TR/2025/CRD-secure-payment-confirmation-20250213/'>2025-02-13</a></p>
+              <p><b>Exclusion Draft:</b> <a href='https://www.w3.org/TR/2023/CR-secure-payment-confirmation-20230615/'>https://www.w3.org/TR/2023/CR-secure-payment-confirmation-20230615/</a><br>
+                                <a href='https://www.w3.org/mid/cfe-11833-54682773a8d1299146782e12164a0dca03f02bcc@w3.org'>Exclusion period</a>
+                                began on 2023-06-15 and
+                                ended on 2023-08-14.
+                            </p>
+              <p><b>Exclusion Draft Charter</b>: Produced under Working Group Charter: <a href='https://www.w3.org/Payments/WG/charter-2022.html'>https://www.w3.org/Payments/WG/charter-2022.html</a>                                                            </p>
+	    </dd>
+	  </dl>
+
+	<p>The following specifications do not yet have sufficient
+	  cross-browser implementation experience to advance to
+	  Recommendation. However, the implementation in Chromium
+	  browsers enables experimentation and the Working Group
+	  intends to maintain them as Working Drafts. If the
+	  implementation landscape changes, the Working Group will
+	  revisit the question of advancement to Recommendation and
+	  re-charter as needed.</p>
+
+	<dl>
+	           <dl>
+                                            <dt id="payment-method-manifest" class="spec"><a href="https://www.w3.org/TR/payment-method-manifest/" rel='versionof'>Payment Method Manifest</a></dt>
+                        <dd>
+                            <p>This specification defines the machine-readable manifest file, known as a payment method manifest, describing how a payment method participates in the Web Payments ecosystem, and how such files are to be used.</p>
+                            <p><b>Draft state:</b> Working Draft</p>
+                            <p><b>Expected completion:</b> Q4 2026</p>
+                            <p><b>Latest publication:</b> <a href='https://www.w3.org/TR/2017/WD-payment-method-manifest-20171212/'>2017-12-12</a></p>
+                            <p><b>Exclusion Draft:</b>
+                                <a href='https://www.w3.org/TR/2017/WD-payment-method-manifest-20171212/'>https://www.w3.org/TR/2017/WD-payment-method-manifest-20171212/</a><br>
+                                <a href='https://lists.w3.org/Archives/Member/member-cfe/2017Dec/0004.html'>Exclusion period</a>
+                                began on 2017-12-12 and
+                                ended on 2018-05-11.
+                            </p>
+                            <p><b>Exclusion Draft Charter</b>: Produced under Working Group Charter:
+                                                                    <a href="https://www.w3.org/Payments/WG/charter-201510.html">http://www.w3.org/Payments/WG/charter-201510.html</a>                                                            </p>
+                        </dd>
+                                            <dt id="payment-handler" class="spec"><a href="https://www.w3.org/TR/payment-handler/" rel='versionof'>Payment Handler API</a></dt>
+                        <dd>
+                            <p>The Payment Request API provides a standard way to initiate payment requests from Web pages and applications. User agents implementing that API prompt the user to select a way to handle the payment request, after which the user agent returns a payment response to the originating site. This specification defines capabilities that enable Web applications to handle payment requests.</p>
+                            <p><b>Draft state:</b> Working Draft</p>
+                            <p><b>Expected completion:</b> Q4 2026</p>
+                            <p><b>Latest publication:</b> <a href='https://www.w3.org/TR/2023/WD-payment-handler-20230125/'>2023-01-25</a></p>
+                            <p><b>Exclusion Draft:</b>
+                                <a href='https://www.w3.org/TR/2017/WD-payment-handler-20170518/'>https://www.w3.org/TR/2017/WD-payment-handler-20170518/</a><br>
+                                <a href='https://lists.w3.org/Archives/Member/member-cfe/2017May/0007.html'>Exclusion period</a>
+                                began on 2017-05-18 and
+                                ended on 2017-10-15.
+                            </p>
+                            <p><b>Exclusion Draft Charter</b>: Produced under Working Group Charter:
+                                                                    <a href="https://www.w3.org/Payments/WG/charter-201510.html">http://www.w3.org/Payments/WG/charter-201510.html</a>                                                            </p>
+                        </dd>
+                                            <dt id="payment-request" class="spec"><a href="https://www.w3.org/TR/payment-request/" rel='versionof'>Payment Request API</a></dt>
+                        <dd>
+                            <p>This specification standardizes an API to allow merchants (i.e. web sites selling physical or digital goods) to utilize one or more payment methods with minimal integration. User agents (e.g., browsers) facilitate the payment flow between merchant and user.</p>
+                            <p><b>Draft state:</b> Candidate Recommendation. <strong>Note:</strong> Payment Request was first published as a Recommendation in 2022. The Candidate Recommendation adds back features that were removed in order for the document to advance to Recommendation, but that had already been implemented inteorperably. The Working Group republished the features in CR form in order to resolve previous issues, at which point the group expects to advance the updated specification to Recommendation.</p>
+                            <p><b>Expected completion:</b> Q4 2026</p>
+                            <p><b>Latest publication:</b> <a href='https://www.w3.org/TR/2024/CRD-payment-request-20240909/'>2024-09-09</a></p>
+                            <p><b>Exclusion Draft:</b>
+                                <a href='https://www.w3.org/TR/2024/CR-payment-request-20240806/'>https://www.w3.org/TR/2024/CR-payment-request-20240806/</a><br>
+                                <a href='https://www.w3.org/mid/cfe-14232-c243b0001f3ba25c62dec19c6d226c40b52cea2a@w3.org'>Exclusion period</a>
+                                began on 2024-08-07 and
+                                ended on 2024-10-06.
+                            </p>
+                            <p><b>Exclusion Draft Charter</b>: Produced under Working Group Charter:
+                                                                    <a href='https://www.w3.org/Payments/WG/charter-2023.html'>https://www.w3.org/Payments/WG/charter-2023.html</a>                                                            </p>
+                        </dd>
+		   </dl>
+
+	  <p><a href="https://www.w3.org/TR/2022/REC-payment-method-id-20220908/">Payment
+	    Method Identifiers</a> is a W3C Recommendation. The
+	    Working Group will maintain this specification.</p>
+		   
+	</section>
+
+	<section id="incubation">
+          <!-- If no incubation or not a Working Group, delete the section. -->
+          <h3>
+            Tentative Deliverables
+          </h3>
+
+	   <p>Depending on the incubation progress, interest from
+            multiple implementers, and the consensus of the Group
+            participants, the Working Group may adopt the following
+            ideas into a Rec-track specification:</p>
+          <dl>
+            <dt id="facilitated-payment"><a href="https://github.com/WICG/paymentlink">Facilitated Payment link type in HTML</a></dt>
+            <dd>
+              <p>Through the APIs published by this Working Group, merchants request payment and receive responses through Payment Request API. Users respond through payment apps (including Web-based payment apps via the Payment Handler API). The proposal envisions another way for users to respond via payment apps, but not through Payment Request API. Whereas Payment Request API is triggered by buttons in the merchant page, with this proposal the browser takes on the role of presenting candidate payment apps to the user. This approach has the advantage of not requiring merchants to change their checkout UX. Because there is no Payment Request "pipe" for the response, payment apps invoked through a facilitated payment link are expected to be limited to scenarios where the payment data is sent to a backend server rather than returned to the calling context.</p>
+              <p class="draft-status"><b>Draft state:</b>
+		There is not yet a draft specification, only a proposal. Note that because this proposal involves a new link type in HTML, this Working Group would coordinate with the WHATWG.
+              </p>
+            </dd>
+	    <dt>Digital credentials for payments</dt>
+	    <dd>Some discussions have taken place regarding a payments profile within the digital credentials ecosystem. If the community seeks standardization of such a profile at W3C, such work would be in scope for this charter.
+	    </dd>
+          </dl>
+    	</section>
+
+        <section id="other-deliverables">
+          <h3>
+            Other Deliverables
+          </h3>
+          <p>
+            Other non-normative documents may be created such as:
+          </p>
+          <ul>
+            <li>Use case and requirement documents;</li>
+            <li><a href="https://github.com/web-platform-tests/wpt">Test suite</a> and implementation report for the specification;</li>
+            <li>Documents to support web developers when designing applications.</li>
+          </ul>
+        </section>
+
+        <section id="timeline">
+          <h3>Timeline</h3>
+
+	  <p>The timeline for advancing Secure Payment Confirmation beyond Candidate Recommendation depends on identifying a second implementation, and is not yet known.</p>
+        </section>
+      </section>
+
+	<section id="success-criteria">
+	  <h2>Success Criteria</h2>
+	  <p>In order to advance beyond
+		  <a href="https://www.w3.org/policies/process/#RecsCR" title="Candidate Recommendation">Candidate Recommendation</a>, each normative specification is expected to have
+		  <a href="https://www.w3.org/policies/process/#implementation-experience">at least two independent interoperable
+			  implementations</a> of every feature defined in the specification, where
+interoperability can be verified by passing open test suites.</p>
+
+	  <p>There should be testing plans for each specification,
+	  starting from the earliest drafts. To promote
+	  interoperability, all changes made to specifications should
+	  have <a href='https://www.w3.org/2019/02/testing-policy.html'>tests</a>.</p>
+
+	  <p>Each specification should contain separate sections
+              detailing all known security and privacy implications
+              for implementers, Web authors, and end users. A key
+              security consideration is the ability to prove message
+              integrity and authentication of all message
+              originators. The Working Group will work with the
+              organizations listed in the Coordination section of the
+              charter to help ensure API security.
+
+	  <p>
+          Protection of the privacy of all participants in a payment is
+          important to maintaining the trust that payment systems are dependent
+          upon to function. A payment process defined by this group should not
+          disclose private details of the participants' identity or other
+          sensitive information unless required for operational purposes, by
+          legal or jurisdictional rules, or when deliberately consented to
+          (e.g., as part of a loyalty program) by the owner of the information.
+          </p>
+
+	  <p>Each specification should contain a section on
+		accessibility that describes the benefits and impacts,
+		including ways specification features can be used to
+		address them, and recommendations for maximizing
+	    accessibility in implementations.</p>
+
+	  <p>This Working Group expects to follow the
+    TAG <a href="https://www.w3.org/TR/design-principles/">Web
+    Platform Design Principles</a>.
+	  </p>
+
+	</section>
+
+      <section id="coordination">
+        <h2>Coordination</h2>
+        <p>For all specifications, this Working Group will seek <a href="https://www.w3.org/Guide/documentreview/#how_to_get_horizontal_review">horizontal review</a> for
+          accessibility, internationalization, privacy, and security with the relevant Working and
+          Interest Groups, and with the <a href="https://www.w3.org/groups/other/tag/" title="Technical Architecture Group">TAG</a>.
+          Invitation for review must be issued during each major standards-track document transition, including
+          <a href="https://www.w3.org/policies/process/#RecsWD" title="First Public Working Draft">FPWD</a>.  The
+          Working Group is encouraged to engage collaboratively with the horizontal review groups throughout development of
+          each specification.  The Working Group is advised to seek a review at least 3 months before first entering
+          <a href="https://www.w3.org/policies/process/#RecsCR" title="Candidate Recommendation">CR</a> and is encouraged
+          to proactively notify the horizontal review groups when major changes occur in a specification following a review.</p>
+
+        <p>Additional technical coordination with the following Groups will be made, per the <a href="https://www.w3.org/policies/process/#WGCharter">W3C Process Document</a>.</p>
+
+      <section>
+          <h3 id="w3c-coordination">W3C Groups</h3>
+        <dl>
+          <dt>
+            <a href="https://www.w3.org/Webauthn/">Web Authentication Working
+            Group</a>
+          </dt>
+          <dd>
+            For discussion of strong authentication.
+          </dd>
+          <dt>
+            <a href="https://www.w3.org/securepay/">Web Payment Security
+            Interest Group</a>
+          </dt>
+          <dd>
+            For discussions about Web payment security and use cases.
+          </dd>
+          <dt>
+            <a href="https://www.w3.org/groups/wg/fedid/">Federated Identity
+            Working Group</a>
+          </dt>
+          <dd>
+            For discussions about payments use cases coupled with identity (e.g., providing a credential related to an age or location requirement).
+          </dd>
+        </dl>
+        </section>
+
+        <section>
+          <h3 id="external-coordination">External Organizations</h3>
+        <dl>
+          <dt>
+            <a href="https://www.emvco.com/">EMVCo</a>
+          </dt>
+          <dd>
+            EMVCo administers many specifications known collectively as EMV®,
+            including specifications about network tokenization, 3-D Secure,
+            and Secure Remote Commerce.
+          </dd>
+          <dt>
+            <a href="https://fidoalliance.org">FIDO Alliance</a>
+          </dt>
+          <dd>
+            For discussions of strong authentication.
+          </dd>
+	  <dt>
+	    <a href="https://openid.net/">OpenID Foundation</a>
+	  </dt>
+	  <dd>
+	    For discussions related to digital wallets for identity and payments.
+	  </dd>
+	  <dt>
+	    <a href="https://whatwg.org/">WHATWG</a>
+	  </dt>
+	  <dd>
+	    For discussion of a <code>facilitated-payment</code> link type in HTML.
+	  </dd>
+        </dl>
+        </section>
+      </section>
+
+      <section class="participation">
+        <h2 id="participation">
+          Participation
+        </h2>
+        <p>
+          To be successful, this Working Group is expected to have 10 or more active participants for its duration, including representatives from the key implementors of the group's specifications, and active Editors for each specification. The Chairs and specification Editors are expected to contribute half of a working day per week towards the Working Group. There is no minimum requirement for other Participants.
+        </p>
+        <p>
+          The group encourages questions, comments and issues on its public mailing lists and document repositories, as described in <a href='#communication'>Communication</a>.
+        </p>
+        <p>
+          The group also welcomes non-Members to contribute technical submissions for consideration upon their agreement to the terms of the <a href="https://www.w3.org/policies/patent-policy/">W3C Patent Policy</a>.
+        </p>
+        <p>Participants in the group are required (by the <a href="https://www.w3.org/policies/process/#ParticipationCriteria">W3C Process</a>) to follow the
+          W3C <a href="https://www.w3.org/policies/code-of-conduct/">Code of Conduct</a>.</p>
+      </section>
+
+      <section id="communication">
+        <h2>
+          Communication
+        </h2>
+        <p id="public">
+	  Technical discussions for this Working Group are conducted in <a href="https://www.w3.org/policies/process/#confidentiality-levels">public</a>: the meeting minutes from teleconference and face-to-face meetings will be archived for public review, and technical discussions and issue tracking will be conducted in a manner that can be both read and written to by the general public. Working Drafts and Editor's Drafts of specifications will be developed in public repositories and may permit direct public contribution requests. The meetings themselves are not open to public participation, however.
+	</p>
+	<p>
+          Information about the group (e.g., deliverables, participants, face-to-face meetings, teleconferences, etc.) is available from the <a href="https://www.w3.org/groups/wg/payments">Web Payments Working Group home page</a>.
+        </p>
+
+        <p>This group primarily conducts its work on GitHub and the public mailing list public-payments-wg@w3.org (<a href="https://lists.w3.org/Archives/Public/public-payments-wg/">archive</a>).</p>
+
+        <p>
+          The group may use a Member-confidential mailing list for administrative purposes and, at the discretion of the Chairs and members of the group, for member-only discussions in special cases when a participant requests such a discussion.
+        </p>
+      </section>
+
+      <section id="decisions">
+        <h2>
+          Decision Policy
+        </h2>
+        <p>
+          This group will seek to make decisions through consensus and due process, per the <a href="https://www.w3.org/policies/process/#Consensus">W3C Process Document (section 5.2.1, Consensus)</a>. Typically, an editor or other participant makes an initial proposal, which is then refined in discussion with members of the group and other reviewers, and consensus emerges with little formal voting being required.</p>
+        <p>
+           However, if a decision is necessary for timely progress and consensus is not achieved after careful consideration of the range of views presented, the Chairs may call for a group vote and record a decision along with any objections.
+        </p>
+        <p>
+	  To afford asynchronous decisions and organizational deliberation, any resolution (including publication decisions) taken in a face-to-face meeting or teleconference will be considered provisional. A call for consensus (CfC) will be issued for all resolutions (e.g., email, GitHub issue or web-based survey), with an appropriate response period depending on the chair’s evaluation of the group consensus on the issue. If no objections are raised by the end of the response period, the resolution will be considered to have consensus as a resolution of the Working Group.
+	  </p>
+        <p>
+          All decisions made by the group should be considered resolved unless and until new information becomes available or unless reopened at the discretion of the Chairs.
+        </p>
+        <p>
+          This charter is written in accordance with the <a href="https://www.w3.org/policies/process/#Votes">W3C Process Document (Section 5.2.3, Deciding by Vote)</a> and includes no voting procedures beyond what the Process Document requires.
+        </p>
+      </section>
+
+
+
+      <section id="patentpolicy">
+
+        <h2>
+          Patent Policy
+        </h2>
+        <p>
+          This Working Group operates under the <a href="https://www.w3.org/policies/patent-policy/">W3C Patent Policy</a> (Version of 15 September 2020). To promote the widest adoption of Web standards, W3C seeks to issue Web specifications that can be implemented, according to this policy, on a Royalty-Free basis.
+
+          For more information about disclosure obligations for this group, please see the <a href="https://www.w3.org/groups/wg/payments/ipr/">licensing information</a>.
+        </p>
+      </section>
+
+      <section id="licensing">
+        <h2>Licensing</h2>
+        <p>
+          This Working Group will use the <a href="https://www.w3.org/copyright/software-license/">W3C Software
+          and Document license</a> for all its deliverables.
+        </p>
+      </section>
+
+      <section id="about">
+        <h2>
+          About this Charter
+        </h2>
+        <p>
+          This charter has been created according to <a href="https://www.w3.org/policies/process/#GAGeneral">section 3.4</a> of the <a href="https://www.w3.org/policies/process/">Process Document</a>. In the event of a conflict between this document or the provisions of any charter and the W3C Process, the W3C Process shall take precedence.
+        </p>
+
+        <section id="history">
+          <h3>
+            Charter History
+	  </h3>
+          <p>The following table lists details of all changes from the initial charter, per the <a href="https://www.w3.org/policies/process/#CharterReview">W3C Process Document (section 4.3, Advisory Committee Review of a Charter)</a>:</p>
+
+      <table class="history">
+        <tbody>
+          <tr>
+            <th>
+              Charter Period
+            </th>
+            <th>
+              Start Date
+            </th>
+            <th>
+              End Date
+            </th>
+            <th>
+              Changes
+            </th>
+          </tr>
+          <tr>
+            <th>
+              <a href=
+              "https://www.w3.org/Payments/WG/charter-201510.html">2015 (Initial)
+              Charter</a>
+            </th>
+            <td>
+              21 October 2015
+            </td>
+            <td>
+              31 December 2017
+            </td>
+            <td>
+              N/A
+            </td>
+          </tr>
+          <tr>
+            <th>
+              Charter Extension
+            </th>
+            <td>
+              1 January 2018
+            </td>
+            <td>
+              1 March 2018
+            </td>
+            <td>
+              None (Rechartering)
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <a href="https://www.w3.org/Payments/WG/charter-201803.html">2018
+              Charter</a>
+            </th>
+            <td>
+              9 March 2018
+            </td>
+            <td>
+              31 December 2019
+            </td>
+            <td>
+              Deliverables under consideration since the previous charter are
+              listed in section 1.2.
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <a href="https://www.w3.org/Payments/WG/charter-201912.html">2020 Charter</a>
+            </th>
+            <td>
+              19 December 2019
+            </td>
+            <td>
+              31 December 2021
+            </td>
+            <td>
+              Deliverables under consideration since the previous charter are
+              listed in section 1.2.
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <a href='https://www.w3.org/Payments/WG/charter-2022.html'>2022 Charter</a>
+            </th>
+            <td>
+              8 November 2022
+            </td>
+            <td>
+              31 December 2024
+            </td>
+            <td>
+	      Added SPC. Completed version 1 of Payment Request and Payment Method Identifiers and moved them to maintenance mode. Reset expectations about Payment Handler and Payment Method Manifest timelines. Deprecated Basic Card Payment Method. Dropped SRC Payment Method. Use "this version" URLs for links to Payment Request API and Payment Method Identifiers Recommendations instead of GitHub URLs.
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <a href="https://www.w3.org/Payments/WG/charter-2023.html">2023 Charter</a>
+            </th>
+            <td>
+	      2 August 2023
+            </td>
+            <td>
+              31 July 2025
+            </td>
+            <td>
+	      Restored text indicating user interface specifics are out of scope, updated milestones. Boilerplate text was updated to match the current charter template.
+            </td>
+          </tr>
+          <tr>
+            <th>
+              2025 Charter
+            </th>
+            <td>
+	      N/A
+            </td>
+            <td>
+	      N/A
+            </td>
+            <td>
+	      There are now complementary "tracks" within W3C related to payments on the Web: the "Payment Request ecosystem" created by this group and "the digital wallet ecosystem" which is a joint effort involving W3C, OIDF, IETF, and other SDOs. This charter has been revised to account for this evolution.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+        </section>
+
+	<section id="changelog">
+          <h3>Change log</h3>
+
+          <!-- Use this section for changes _after_ the charter was approved by the Director. -->
+          <p>Changes to this document are documented in this section.</p>
+          <!--
+          <dl id='changes'>
+            <dt>YYYY-MM-DD</dt>
+            <dd>[changes]]</dd>
+          </dl>
+          -->
+        </section>
+      </section>
+    </main>
+
+    <hr>
+
+    <footer>
+      <address>
+        <a href="mailto:ij@w3.org">Ian Jacobs</a>
+      </address>
+
+<p class="copyright">Copyright © 2025 <a href="https://www.w3.org/">World Wide Web Consortium</a>.<br>
+  <abbr title="World Wide Web Consortium">W3C</abbr><sup>®</sup>
+  <a href="https://www.w3.org/policies/#disclaimers">liability</a>,
+  <a href="https://www.w3.org/policies/#trademarks">trademark</a> and
+      <a rel="license" href="https://www.w3.org/copyright/software-license/" title="W3C Software and Document Notice and License">permissive document license</a> rules apply.</p>
+
+      <p>EMV® is a registered trademark in the U.S. and other countries and an unregistered trademark elsewhere. The EMV trademark is owned by EMVCo, LLC.       </p>
+      <hr>
+    </footer>
+
+  </body>
+</html>
