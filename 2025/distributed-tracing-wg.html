@@ -152,7 +152,7 @@
               Meeting Schedule
             </th>
             <td>
-              <strong>Teleconferences:</strong>  1-hour team calls will be held bi-weekly.
+              <strong>Teleconferences:</strong>  1-hour calls will be held bi-weekly.
               <br>
               <strong>Face-to-face:</strong> One yearly face-to-face meeting may be scheduled by consent of the participants.
             </td>
@@ -169,14 +169,8 @@
           to as "tracing". Tracing tools, such as <a href="https://opentelemetry.io/">OpenTelemetry</a>, need data interoperability to collect, propagate, and
           modify tracing information.
         </p>
-      </div>
-
-      <section id="scope" class="scope">
-        <h2>Scope</h2>
         <p>
-          Tracing tools for collecting the individual requests information have been available for quite some time. However, these tools have not been
-          built with interoperability in mind. This leaves the developer with a number of challenges in getting an end-to-end
-          trace of complex transactions:
+          The lack of interoperability leaves the developer with a number of challenges in getting an end-to-end trace of complex transactions:
           <ul>
             <li>Traces are often broken, because trace context information is lost in a contributing tier or the trace is restarted</li>
             <li>Vendors cannot pass proprietary information across tiers instrumented with a different implementation and therefore
@@ -185,9 +179,12 @@
               by different tools, as there is no defined data format and semantics for trace data</li>
           </ul>
         </p>
+      </div>
+
+      <section id="scope" class="scope">
+        <h2>Scope</h2>
         <p>
-          The scope of this working group is the definition of data formats and headers enabling the propagation and correlation of
-          tracing data across different implementations.
+          The scope of this working group is the definition of data formats and headers enabling the propagation and correlation of tracing data across different implementations.
         </p>
 
         <section id="section-out-of-scope">
@@ -236,8 +233,8 @@
 
                 This update is intended to include a mechanism to carry context information in protocol responses, thus allowing context information to be accessed in Web browsers.
               </p>
-            <p class="draft-status"><b>Draft state:</b> <a href="https://www.w3.org/TR/2023/CR-trace-context-2-20230418/">Candidate Recommendation</a>
-              <p class="milestone"><b>Expected completion:</b> <i class="todo">Q? 2026</i></p>
+            <p class="draft-status"><b>Draft state:</b> <a href="https://www.w3.org/TR/2024/CRD-trace-context-2-20240328/">Candidate Recommendation</a>
+              <p class="milestone"><b>Expected completion:</b> Q4 2025</p>
               <p><b>Adopted Draft:</b> <a href='https://www.w3.org/TR/2023/CR-trace-context-2-20230418/'>2023-04-18</a></li>
             <p><b>Exclusion Draft:</b> <a href='https://www.w3.org/TR/2023/CR-trace-context-2-20230418/'>https://www.w3.org/TR/2023/CR-trace-context-2-20230418/</a>,
             associated <a href='https://www.w3.org/mid/cfe-10516-7be30be50df34d2d757f90ac32c4d6894b7904da@w3.org'>Call for Exclusion</a>
@@ -249,7 +246,7 @@ on 2023-04-18, ending on 2023-06-17</i></p>
                 <p>This specification defines a standard for representing and propagating a set of application-defined properties associated with a distributed request or workflow execution.</p>
 
                 <p class="draft-status"><b>Draft state:</b> <a href="https://www.w3.org/TR/2024/CR-baggage-20240530/">Candidate Recommendation</a></p>
-                <p class="milestone"><b>Expected completion:</b> <i class="todo">Q? 2026</i></p>
+                <p class="milestone"><b>Expected completion:</b> Q2 2026</p>
                 <p><b>Adopted Draft:</b> <a href='https://www.w3.org/TR/2024/CR-baggage-20240530/'>2024-05-30</a></li>
                 <p><b>Exclusion Draft:</b> <a href='https://www.w3.org/TR/2024/CR-baggage-20240530/'>https://www.w3.org/TR/2024/CR-baggage-20240530/</a>, associated <a href='https://www.w3.org/mid/cfe-13735-b303acd3d5d44f101df319998acb3b23f7dae99e@w3.org'> Call for Exclusion</a>
 on 2024-05-30, ended on 2024-07-29.</p>
@@ -353,13 +350,14 @@ interoperability can be verified by passing open test suites.</p>
           To be successful, this Working Group is expected to have 6 or more active participants for its duration, including representatives from the key implementors of this specification, and active Editors and Test Leads for each specification. The Chairs, specification Editors, and Test Leads are expected to contribute half of a working day per week towards the Working Group. There is no minimum requirement for other Participants.
         </p>
         <p>
-          The group encourages questions, comments and issues on its public mailing lists and document repositories, as described in <a href='#communication'>Communication</a>.
+          The group encourages questions, comments and issues on its public mailing lists and document repositories, as described in <a href='#communication'>Communication</a>. The group also welcomes non-Members to make technical contributions for ongoing work, provided they agree to the terms of the <a href="https://www.w3.org/policies/patent-policy/">W3C Patent Policy</a>.
         </p>
         <p>
-          The group also welcomes non-Members to contribute technical submissions for consideration upon their agreement to the terms of the <a href="https://www.w3.org/policies/patent-policy/">W3C Patent Policy</a>.
+          The Chairs should periodically look through the non-Members who have contributed to the Working Group and consider whether each one should be invited to participate as an <a href="https://www.w3.org/invited-experts/">Invited Expert</a>. If a non-Member contributor would like to participate in meetings, they are encouraged to <a href="https://www.w3.org/groups/wg/distributed-tracing/instructions/">apply to be an Invited Expert</a>.
         </p>
         <p>Participants in the group are required (by the <a href="https://www.w3.org/policies/process/#ParticipationCriteria">W3C Process</a>) to follow the
           W3C <a href="https://www.w3.org/policies/code-of-conduct/">Code of Conduct</a>.</p>
+
       </section>
 
 
