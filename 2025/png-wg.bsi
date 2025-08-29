@@ -10,7 +10,7 @@ Issue 1.
 Summary:  Wrong link to 2023 charter
 From:     Chris Needham 
 Comment:  https://github.com/w3c/png/issues/535#issuecomment-3234508438
-Response: 
+Response: https://github.com/w3c/png/issues/535#issuecomment-3237504944
 Closed:   Accepted
 Verified: [url]
 Resolved: Fixed link
@@ -28,10 +28,10 @@ Issue 3.
 Summary:  Re-arrange order in Scope section
 From:     Chris Needham 
 Comment:  https://github.com/w3c/png/issues/535#issuecomment-3234508438
-Response: 
-Closed:   
+Response: https://github.com/w3c/png/issues/535#issuecomment-3237508786
+Closed:   Accepted
 Verified: 
-Resolved:
+Resolved: Re-arranged order
 ----
 Issue 4.
 Summary:  Consider adding C2PA metadata
@@ -44,7 +44,7 @@ Closed:
 Verified: 
 Resolved:
 ----
-Issue 4.
+Issue 5.
 Summary:  Put C2PA metadata in Scope
 From:     Chris Needham 
 Comment:  https://github.com/w3c/png/issues/535#issuecomment-3234517650
@@ -52,3 +52,14 @@ Response:
 Closed:   
 Verified: 
 Resolved:
+----
+Issue 6.
+Summary:  Mention HDR and compression in Scope
+From:     Chris Needham 
+Comment:  https://github.com/w3c/png/issues/535#issuecomment-3234508438
+Response: https://github.com/w3c/png/issues/535#issuecomment-3237513653
+Closed:   
+Verified: 
+Resolved:
+
+
