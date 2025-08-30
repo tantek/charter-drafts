@@ -1,7 +1,7 @@
 Title:    PNG 2025 charter
 Draft:    https://w3c.github.io/charter-drafts/2025/png-wg.html
 ED:       none
-Date:     2025-08-29
+Date:     2025-08-30
 Status:   Charter
 Intro:    <p>Disposition of comments from charter review
 
@@ -30,7 +30,7 @@ From:     Chris Needham
 Comment:  https://github.com/w3c/png/issues/535#issuecomment-3234508438
 Response: https://github.com/w3c/png/issues/535#issuecomment-3237508786
 Closed:   Accepted
-Verified: 
+Verified: https://github.com/w3c/png/issues/535#issuecomment-3237589215
 Resolved: Re-arranged order
 ----
 Issue 4.
@@ -40,26 +40,26 @@ Comment:  https://lists.w3.org/Archives/Public/public-png/2025Aug/0004.html
 Response: https://lists.w3.org/Archives/Public/public-png/2025Aug/0005.html
 Response: https://lists.w3.org/Archives/Public/public-png/2025Aug/0006.html
 Response: https://lists.w3.org/Archives/Public/public-png/2025Aug/0007.html
-Closed:   
+Closed:   Accepted
 Verified: 
-Resolved:
+Resolved: Group will discuss at next meeting
 ----
 Issue 5.
 Summary:  Put C2PA metadata in Scope
 From:     Chris Needham 
 Comment:  https://github.com/w3c/png/issues/535#issuecomment-3234517650
-Response: 
-Closed:   
-Verified: 
-Resolved:
+Response: https://github.com/w3c/png/issues/535#issuecomment-3239192214
+Closed:   Accepted
+Verified: https://github.com/w3c/png/issues/535#issuecomment-3237589215
+Resolved: Added general statement about metadata (covers C2PA, but not restricted to that)
 ----
 Issue 6.
 Summary:  Mention HDR and compression in Scope
 From:     Chris Needham 
 Comment:  https://github.com/w3c/png/issues/535#issuecomment-3234508438
 Response: https://github.com/w3c/png/issues/535#issuecomment-3237513653
-Closed:   
-Verified: 
-Resolved:
+Closed:   Accepted
+Verified: https://github.com/w3c/png/issues/535#issuecomment-3237589215
+Resolved: Added mentions
 
 
