@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+
+    <title>[DRAFT] Web Performance Group Charter</title>
+
+    <link rel="stylesheet" href="https://www.w3.org/2005/10/w3cdoc.css" type="text/css" media="screen">
+    <link rel="stylesheet" type="text/css" href="https://www.w3.org/OldGuide/pubrules-style.css">
+    <link rel="stylesheet" type="text/css" href="https://www.w3.org/2006/02/charter-style.css">
+    <style>
+      ul#navbar {
+        font-size: small;
+      }
+
+      dt.spec {
+        font-weight: bold;
+      }
+
+      dt.spec new {
+        background: yellow;
+      }
+
+      ul.out-of-scope > li {
+        font-weight: bold;
+      }
+
+      ul.out-of-scope > li > ul > li{
+        font-weight: normal;
+      }
+
+      .issue {
+        background: cornsilk;
+        font-style: italic;
+      }
+
+      .todo {
+        color: #900;
+      }
+
+      footer {
+        font-size: small;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header">
+      <aside>
+        <ul id="navbar">
+          <li><a href="#background">Background</a></li>
+          <li><a href="#scope">Scope</a></li>
+          <li><a href="#deliverables">Deliverables</a></li>
+		  <li><a href="#success-criteria">Success Criteria</a></li>
+          <li><a href="#coordination">Coordination</a></li>
+          <li><a href="#participation">Participation</a></li>
+          <li><a href="#communication">Communication</a></li>
+          <li><a href="#decisions">Decision Policy</a></li>
+          <li><a href="#patentpolicy">Patent Policy</a></li>
+          <li><a href="#licensing">Licensing</a></li>
+          <li><a href="#about">About this Charter</a></li>
+        </ul>
+      </aside>
+      <p>
+        <a href="https://www.w3.org/"><img alt="W3C" height="120" src="https://www.w3.org/assets/logos/w3c-2025/svg/w3c.svg" width="120"></a>
+      </p>
+    </header>
+
+
+    <main>
+      <h1 id="title">Web Performance Working Group Charter</h1>
+
+      <p class="mission">The <strong>mission</strong> of the <a href="https://www.w3.org/groups/wg/webperf">Web Performance Working Group</a> 
+        is to provide methods to observe and improve aspects of application performance of user agent features and APIs.</p>
+
+      <div class="noprint">
+        <p class="join"><a href="https://www.w3.org/groups/wg/webperf/join">Join the Web Performance Working Group.</a></p>
+      </div>
+
+  <p style="padding: 0.5ex; border: 1px solid green"> This proposed charter is available
+      on <a href="https://github.com/w3c/charter-drafts/blob/gh-pages/2026/webperf-wg-charter.html">GitHub</a>.
+        Feel free to raise <a href="https://github.com/w3c/charter-drafts/issues?q=is%3Aissue%20state%3Aopen%20%5Bwg%2Fwebperf%5D">issues</a>.
+      </p> 
+
+      <div id="details">
+        <table class="summary-table">
+          <tr id="Status">
+            <th>
+              Charter Status
+            </th>
+            <td>
+              See the <a href="https://www.w3.org/groups/wg/webperf/charters">group status page</A> and <a href="#history">detailed change history</a>.
+            </td>
+          </tr>		
+          <tr id="Duration">
+            <th>
+              Start date
+            </th>
+            <td>
+              1 May 2026
+            </td>
+          </tr>
+          <tr id="CharterEnd">
+            <th>
+              End date
+            </th>
+            <td>
+              1 May 2028
+            </td>
+          </tr>
+          <tr>
+            <th>
+              Chairs
+            </th>
+            <td>
+              Nic Jansma, Akamai
+              <br>Yoav Weiss, Shopify
+              </td>
+          </tr>
+          <tr>
+            <th>
+              Team Contacts
+            </th>
+            <td>
+              <a href="mailto:carine@w3.org">Carine Bournez</a> (0.15 <abbr title="Full-Time Equivalent">FTE</abbr>)
+            </td>
+          </tr>
+          <tr>
+            <th>
+              Meeting Schedule
+            </th>
+            <td>
+              <strong>Teleconferences:</strong> bi-weekly
+              <br>
+              <strong>Face-to-face:</strong> we will meet during the W3C's annual Technical Plenary week; one additional face-to-face meeting per year may be scheduled by consent of the participants.
+              <br> IRC channel: #webperf
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div id="background" class="background">
+        <h2>Motivation and Background</h2>
+        <p>Web developers are building sophisticated applications where application performance is a critical feature. Web developers want the ability to observe the performance characteristics of their applications, and they want the ability to write more efficient applications, using well-defined interoperable methods. Their methods must be both secure and privacy-enabling by design, using well-defined interoperable methods that conform to the current Web browser security model.</p>
+
+      </div>
+
+      <section id="scope" class="scope">
+        <h2>Scope</h2>
+       
+        <p>The Web Performance Working Group&#39;s scope of work includes user agent features and APIs to observe and improve various aspects of application performance:</p>
+        
+        <ul>
+            <li><i>Measurement</i><br>
+        The WG will deliver APIs to measure network and rendering performance, responsiveness and interactivity, memory and CPU use, application failures, and other aspects of the user&rsquo;s experience, from the perspectives of both application loading and continuous user interaction. In particular, the group will deliver means to measure user experience metrics in popular web architectures, such as single-page apps, as well as means to collect those measurements.</li>
+            <li><i>Scheduling</i><br>
+        The WG will deliver APIs to enable developers to improve scheduling of application work as well as use of network resources, to minimize loading times and ensure ideal user experience.
+            <li><i>Adaptation</i><br>
+        The WG will deliver APIs to enable developers to deliver resources adapted to the user&rsquo;s device, preferences, conditions, or other circumstances.</li>
+    </ul>
+    <p>Such deliverables will apply to desktop and mobile browsers and other non-browser environments where appropriate, and will be consistent with Web technologies designed in other working groups including HTML, CSS, Web Application Security, Web Apps, Device and Sensors, and SVG. The Group will strive for its deliverables to be well-integrated with other specifications where appropriate.</p>
+    
+    <p>In addition to developing Recommendation Track documents, the Web Performance Working Group may provide specification review to other Groups, and will collaborate with relevant incubations. Such collaboration can be around web platform specifications, but can also include relevant developer or industry conventions, potentially applied in non-browser environments, as long as it's aligned with the Working Group's scope and mission.
+    </p>
+
+        <section id="section-out-of-scope">
+          <h3 id="out-of-scope">Out of Scope</h3>
+          <p>The following features are out of scope, and will not be addressed by this working group.</p>
+          <ul class="out-of-scope"><li>performance data analysis techniques or algorithms.</li></ul>
+        </section>
+
+      </section>
+
+      <section id="deliverables">
+        <h2>
+          Deliverables
+        </h2>
+
+        <p>Updated document status is available on the <a href="https://www.w3.org/groups/wg/webperf/publications">group publication status page</a>.</p>
+
+        <p><i>Draft state</i> indicates the state of the deliverable at the time of the charter approval. </p>
+          
+        <p>The Working Group intends to publish the latest state of their work as Candidate Recommendations, upgrading specifications with Candidate Recommendation Snapshots. Alternatively, ongoing work may be published as Recommendations to be updated further with Candidate Changes.</p>
+
+        <p>The Working Group expects to gradually move all of its deliverables to this model. Beyond that, the WG expects to converge at least some of its deliverables into a smaller number of specifications.</p>
+
+        <section id="normative">
+          <h3>
+            Normative Specifications
+          </h3>
+          <p>
+            The Web Performance Working Group will deliver the following W3C normative specifications:
+          </p>
+
+
+
+        </section>
+
+        <section id="ig-other-deliverables">
+          <h3>
+            Other Deliverables
+          </h3>
+          <p>The Group maintains two non-normative documents:</p>
+          <ul>
+            <li>A <a href="https://w3c.github.io/perf-timing-primer/">Primer for Web Performance Timing APIs</a> document to facilitate the understanding of the interrelationships between its deliverables.<br>
+              Planned work: Updating it to <a href="https://github.com/w3c/web-performance/issues/54">include new specs</a>, remove deprecated ones and more.</li>
+            <li>
+              A <a href="https://w3c.github.io/perf-security-privacy/">Performance APIs, Security and Privacy document</a><br>
+              Planned work: <a href="https://github.com/w3c/web-performance/issues/46">Reviewing and updating the content</a>, 
+              and adding a section on the principals and value of performance measurements.
+            </li>
+            </ul>
+          <p>Other non-normative documents may be created such as:</p>
+  <ul>
+    <li><a href="https://w3c.github.io/perf-security-privacy/">Security and Privacy considerations for Performance APIs</a></li>
+    <li>Test suites for each specification;</li>
+    <li>Use cases documents to support development and exploration of performance-critical web platform features and APIs;</li>
+    <li>Primer or Best Practice documents to support web developers when designing applications with performance in mind;</li>
+    <li>Developer and user guides for its normative specifications;</li>
+    <li>Best practice document explaining how data is commonly gathered between the client and the server.</li>
+  </ul>
+
+        </section>
+
+        <section id="timeline">
+          <h3>Timeline</h3>
+            <ul>
+              <li>Next meeting: TPAC 2026 in hybrid mode.</li>
+            </ul>
+        </section>
+      </section>
+
+	<section id="success-criteria">
+	  <h2>Success Criteria</h2>
+
+       <!-- Testing and interop -->
+	  <p>In order to advance beyond
+		  <a href="https://www.w3.org/policies/process/#RecsCR" title="Candidate Recommendation">Candidate Recommendation</a>, each normative specification is expected to have
+		  <a href="https://www.w3.org/policies/process/#implementation-experience">at least two independent interoperable
+			  implementations</a> of every feature defined in the specification, where
+interoperability can be verified by passing open test suites. In order to advance beyond Candidate Recommendation, each normative specification must have an open test suite of every feature defined in the specification.</p>
+	  <p>There should be testing plans for each specification, starting from the earliest drafts.</p>
+    <p>
+      To promote interoperability, all changes made to specifications
+      in Candidate Recommendation
+      or to features that have deployed implementations
+      should have <a href='https://www.w3.org/policies/testing/'>tests</a>.
+      Testing efforts should be conducted via the <a href="https://github.com/web-platform-tests/wpt">Web Platform Tests</a> project.</p>
+
+    <!-- Horizontal review -->
+
+    <p>Each specification should contain separate sections detailing all known security and
+      privacy implications for implementers, Web authors, and end users.</p>
+
+
+    <!-- W3C Statements and Web Platform Design Principles -->
+    <p>This group is expected to be guided by the following documents:</p>
+    <ul>
+      <li><a href="https://www.w3.org/TR/ethical-web-principles/">Ethical Web Principles</a>,</li>
+      <li><a href="https://www.w3.org/TR/privacy-principles/">Privacy Principles</a>,</li>
+      <li><a href="https://www.w3.org/TR/design-principles/">Web Platform Design Principles</a>.</li>
+    </ul>
+
+    <!-- Relevance and momentum -->
+	  <p> All new features should have expressions of interest from at least two potential implementors before being incorporated in a specification.</p>
+	</section>
+
+      <section id="coordination">
+        <h2>Coordination</h2>
+        <p>For all specifications, this Working Group will seek <a href="https://www.w3.org/Guide/documentreview/#how_to_get_horizontal_review">horizontal review</a> for
+          accessibility, internationalization, privacy, and security with the relevant Working and
+          Interest Groups, and with the <a href="https://www.w3.org/2001/tag/" title="Technical Architecture Group">TAG</a>.
+          Invitation for review must be issued during each major standards-track document transition, including
+          <a href="https://www.w3.org/Consortium/Process/#RecsWD" title="First Public Working Draft">FPWD</a>.  The
+         Working Group is encouraged to engage collaboratively with the horizontal review groups throughout development of
+          each specification.  The Working Group is advised to seek a review at least 3 months before first entering
+          <a href="https://www.w3.org/Consortium/Process/#RecsCR" title="Candidate Recommendation">CR</a> and is encouraged
+          to proactively notify the horizontal review groups when major changes occur in a specification following a review.</p>
+
+        <p>Additional technical coordination with the following Groups will be made, per the <a href="https://www.w3.org/Consortium/Process/#WGCharter">W3C Process Document</a>:</p>
+
+
+        <section>
+          <h3 id="w3c-coordination">W3C Groups</h3>
+
+          <dl>
+        <dt><a href="https://www.w3.org/groups/wg/webapps/">Web Applications Working Group</a></dt>
+        <dd>This Working Group develops APIs for client-side development and for markup vocabularies for describing and controlling client-side application behavior.</dd>
+    
+        <dt><a href="https://www.w3.org/groups/wg/webappsec/">Web Application Security Working Group</a></dt>
+        <dd>This Working Group develops security and policy mechanisms to improve the security of Web Applications, and enable secure cross-site communication.</dd>
+    
+        <dt><a href="https://www.w3.org/groups/ig/privacy/">Privacy Interest Group</a></dt>
+        <dd>This group monitors ongoing privacy issues that affect the Web, investigates potential areas for new privacy work, and provides guidelines and advice for addressing privacy in standards development.</dd>
+    
+        <dt><a href="https://www.w3.org/community/wicg/">Web Platform Incubator Community Group</a></dt>
+        <dd>
+          This group provides a lightweight venue for proposing, incubating and discussing new web platform features. The Web Performance Working group will incubate and review new proposals that are within scope of our charter within the WICG. Once such WICG-incubated proposal is implemented and available in at least one major browser, and has support from one more, it may be adopted by the Web Performance Working group.
+        </dd>
+          </dl>
+
+        </section>
+
+        <section>
+          <h3 id="external-coordination">External Organizations</h3>
+          <dl>
+            <dt><a href="https://www.ecma-international.org/memento/tc39.htm" id="tc39">ECMA Technical Committee 39 (TC39)</a></dt>
+          <dd>This is the group responsible for ECMAScript standardization, and related ECMAScript features like E4X. As the Web Performance Working Group will be developing ECMAScript APIs, it should collaborate with TC39.</dd>
+          <dt><a title="IETF Home Page" href="https://www.ietf.org/" id="ietf">Internet Engineering Task Force</a></dt>
+          <dd>The IETF is responsible for defining robust and secure protocols for Internet functionality, in particular HTTP. The Working Group should coordinate protocol-related work (e.g. profiles of hybi or HTTP) with the appropriate IETF WGs.</dd>
+          <dt><a title="WHATWG" href="https://whatwg.org/" id="whatwg">Web Hypertext Application Technology Working Group (WHATWG)</a></dt>
+          <dd>The Web Hypertext Application Technology Working Group (WHATWG) is a community of people interested in evolving the web through standards and tests.</dd>
+          </dl>
+        </section>
+      </section>
+
+
+
+      <section class="participation">
+        <h2 id="participation">
+          Participation
+        </h2>
+        <p>
+          To be successful, this Working Group is expected to have 9 or more active participants for its duration, including representatives from the key implementors of this specification, and active Editors and Test Leads for each specification. The Chairs, specification Editors, and Test Leads are expected to contribute half of a working day per week towards the Working Group. There is no minimum requirement for other Participants.
+        </p>
+        <p>
+          The group encourages questions, comments and issues on its public mailing lists and document repositories, as described in <a href='#communication'>Communication</a>.
+        </p>
+        <p>
+          The group also welcomes non-Members to contribute technical submissions for consideration upon their agreement to the terms of the <a href="https://www.w3.org/Consortium/Patent-Policy/">W3C Patent Policy</a>.
+        </p>
+        <p>Participants in the group are required (by the <a href="https://www.w3.org/Consortium/Process/#ParticipationCriteria">W3C Process</a>) to follow the
+          W3C <a href="https://www.w3.org/Consortium/cepc/">Code of Ethics and Professional Conduct</a>.</p>
+      </section>
+
+
+
+      <section id="communication">
+        <h2>
+          Communication
+        </h2>
+        <p id="public">
+          Technical discussions for this Working Group are conducted in <a href="https://www.w3.org/Consortium/Process/#confidentiality-levels">public</a>: the meeting minutes from teleconference and face-to-face meetings will be archived for public review, and technical discussions and issue tracking will be conducted in a manner that can be both read and written to by the general public. Working Drafts and Editor's Drafts of specifications will be developed in public repositories and may permit direct public contribution requests.
+        The meetings themselves are not open to public participation, however.
+        </p>
+        <p>
+          Information about the group (including details about deliverables, issues, actions, status, participants, and meetings) will be available from the <a href="https://www.w3.org/groups/wg/webperf">Web Performance Working Group home page.</a>
+        </p>
+        <p>
+          Most Web Performance Working Group teleconferences will focus on discussion of particular specifications, and will be conducted on an as-needed basis.
+        </p>
+        <p>
+          This group primarily conducts its technical work on <a id="public-github" href="https://github.com/w3c/web-performance">GitHub</a> in the relevant specifications repositories.
+          The public is invited to review, discuss and contribute to this work.
+        </p>
+        <p>
+          The group may use a Member-confidential mailing list for administrative purposes.
+        </p>
+      </section>
+
+
+
+      <section id="decisions">
+        <h2>
+          Decision Policy
+        </h2>
+        <p>
+          This group will seek to make decisions through consensus and due process, per the <a href="https://www.w3.org/Consortium/Process/#Consensus">W3C Process Document (section 5.2.1, Consensus)</a>. Typically, an editor or other participant makes an initial proposal, which is then refined in discussion with members of the group and other reviewers, and consensus emerges with little formal voting being required.</p>
+        <p>
+           However, if a decision is necessary for timely progress and consensus is not achieved after careful consideration of the range of views presented, the Chairs may call for a group vote and record a decision along with any objections.
+        </p>
+        <p>
+          To afford asynchronous decisions and organizational deliberation, any resolution (including publication decisions) taken in a face-to-face meeting or teleconference will be considered provisional.
+
+          A call for consensus (CfC) will be issued for all resolutions (for example, via email, GitHub issue or web-based survey), with a response period from <span id='cfc'>one week to 10 working days</span>, depending on the chair's evaluation of the group consensus on the issue.
+
+          If no objections are raised by the end of the response period, the resolution will be considered to have consensus as a resolution of the Working Group.
+        </p>
+        <p>
+          All decisions made by the group should be considered resolved unless and until new information becomes available or unless reopened at the discretion of the Chairs.
+        </p>
+        <p>
+          This charter is written in accordance with the <a href="https://www.w3.org/Consortium/Process/#Votes">W3C Process Document (Section 5.2.3, Deciding by Vote)</a> and includes no voting procedures beyond what the Process Document requires.
+        </p>
+      </section>
+
+
+
+      <section id="patentpolicy">
+
+        <h2>
+          Patent Policy
+        </h2>
+        <p>
+             <p>
+          This Working Group operates under the <a href="https://www.w3.org/policies/patent-policy/">W3C Patent Policy</a> (Version of 15 May 2025). To promote the widest adoption of Web standards, W3C seeks to issue Web specifications that can be implemented, according to this policy, on a Royalty-Free basis.
+
+          For more information about disclosure obligations for this group, please see the <a href="https://www.w3.org/groups/wg/webperf/ipr">licensing information</a>.
+        </p>
+
+      </section>
+
+
+
+      <section id="licensing">
+        <h2>Licensing</h2>
+        <p>This Working Group will use the <a href="https://www.w3.org/Consortium/Legal/copyright-software">W3C Software and Document license</a> for all its deliverables.</p>
+      </section>
+
+
+
+      <section id="about">
+        <h2>
+          About this Charter
+        </h2>
+        <p>
+          This charter has been created according to <a href="https://www.w3.org/Consortium/Process/#GAGeneral">section 3.4</a> of the <a href="https://www.w3.org/Consortium/Process/">Process Document</a>. In the event of a conflict between this document or the provisions of any charter and the W3C Process, the W3C Process shall take precedence.
+        </p>
+
+        <section id="history">
+          <h3>
+            Charter History
+          </h3>
+
+          <p>The following table lists details of all changes from the initial charter, per the <a href="https://www.w3.org/Consortium/Process/#CharterReview">W3C Process Document (section 4.3, Advisory Committee Review of a Charter)</a>:</p>
+
+          <table class="history">
+            <tbody>
+              <tr>
+                <th>
+                  Charter Period
+                </th>
+                <th>
+                  Start Date
+                </th>
+                <th>
+                  End Date
+                </th>
+                <th>
+                  Changes
+                </th>
+              </tr>
+              <tr>
+                <th>
+                  <a href="https://www.w3.org/2010/08/webperf">Initial Charter</a>
+                </th>
+                <td>
+                  2010-08-18
+                </td>
+                <td>
+                  2011-06-30
+                </td>
+                <td>
+                  none
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <a href="https://www.w3.org/2011/04/webperf">Rechartered</a>
+                </th>
+                <td>
+                  2011-04-25
+                </td>
+                <td>
+                  2012-06-30
+                </td>
+                <td>
+                  <p>Added Page Visibility, Efficient Script Yielding, Display Paint notifications</p>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <a href="https://www.w3.org/2013/01/webperf">Rechartered</a>
+                </th>
+                <td>
+                  2013-06-06
+                </td>
+                <td>
+                  2015-05-31
+                </td>
+                <td>
+                  <p>Added Performance Timeline, Timing control for script-based animations, Resource Priorities, Beacon, Diagnostics, Pre-render, Display Performance, Async scroll, HAR. Removed Display Paint notifications.</p>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <a href="https://www.w3.org/2015/06/webperf">Rechartered</a>
+                </th>
+                <td>
+                  2015-06-25
+                </td>
+                <td>
+                  2016-05-31
+                </td>
+                <td>
+                  <p>Added Server Timing, Resource Hints, NEL, Preload (previously Pre-render), Frame Timing, CPU and Memory monitoring. Removed Resource Priorities, Diagnostics, Display Performance, Async scroll.</p>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <a href="https://www.w3.org/2016/07/webperf">Rechartered</a>
+                </th>
+                <td>
+                  2016-06-01
+                </td>
+                <td>
+                  2018-05-31
+                </td>
+                <td>
+                  <p>Removed CPU and Memory monitoring. Moved to WICG: Frame Timing, Server Timing, NEL, Reporting. Moved to Software and Document license.</p>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <a href="https://www.w3.org/2018/09/webperf">Rechartered</a>
+                </th>
+                <td>
+                  2018-09-20
+                </td>
+                <td>
+                  2020-06-30
+                </td>
+                <td>
+                  <p>Removed Memory Pressure. Added: Reporting, NEL, Device Memory.</p>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <a href="https://lists.w3.org/Archives/Member/w3c-ac-members/2020AprJun/0045.html">Extended</a>
+                </th>
+                <td>
+                  2020-07-01
+                </td>
+                <td>
+                  2020-12-31
+                </td>
+                <td>
+                  <p>N/A</p>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <a href="https://lists.w3.org/Archives/Member/w3c-ac-members/2020AprJun/0046.html">Extended</a>
+                </th>
+                <td>
+                  2021-01-01
+                </td>
+                <td>
+                  2021-02-10
+                </td>
+                <td>
+		<p>N/A</p>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <a href="https://lists.w3.org/Archives/Member/w3c-ac-members/2021JanMar/0028.html">Rechartered</a>
+                </th>
+                <td>
+                  2021-02-11
+                </td>
+                <td>
+                  2023-02-28
+                </td>
+                <td>
+                  <p>Resource Hints and Preload will be moved under WhatWG's responsibility. WG switch to the Patent Policy 2020.</p>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <a href="https://lists.w3.org/Archives/Member/w3c-ac-members/2023JanMar/0035.html">Extended</a>
+                </th>
+                <td>
+                  2023-03-01
+                </td>
+                <td>
+                  2023-08-31
+                </td>
+                <td>
+                  <p>N/A</p>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <a href="https://lists.w3.org/Archives/Member/w3c-ac-members/2023JulSep/0027.html">Extended</a>
+                </th>
+                <td>
+                  2023-09-01
+                </td>
+                <td>
+                  2023-11-30
+                </td>
+                <td>
+                  <p>N/A</p>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <a href="https://www.w3.org/2023/11/webperf-charter-2023.html">Rechartered</a>
+                </th>
+                <td>
+                  2023-11-10
+                </td>
+                <td>
+                  2025-12-01
+                </td>
+                <td>
+                  <p>No change in scope</p>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <a href="@@@">Extended</a>
+                </th>
+                <td>
+                  2025-12-02
+                </td>
+                <td>
+                  2026-04-30
+                </td>
+                <td>
+                  <p>No change in scope</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="changelog">
+          <h3>Change log</h3>
+
+          <!-- Use this section for changes _after_ the charter was approved by the Director. -->
+          <p>Changes to this document are documented in this section.</p>
+          <!--
+          <dl id='changes'>
+            <dt>YYYY-MM-DD</dt>
+            <dd>[changes]]</dd>
+          </dl>
+          -->
+        </section>
+      </section>
+    </main>
+
+    <hr>
+
+    <footer>
+      <address>
+        <i><a href="mailto:carine@w3.org">Carine Bournez</a></i>
+      </address>
+
+<p class="copyright">Copyright © 2026 <a href="https://www.w3.org/">World Wide Web Consortium</a>.<br>
+  <abbr title="World Wide Web Consortium">W3C</abbr><sup>®</sup>
+  <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
+  <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and
+      <a rel="license" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document" title="W3C Software and Document Notice and License">permissive document license</a> rules apply.</p>
+      <hr>
+    </footer>
+
+  </body>
+</html>
