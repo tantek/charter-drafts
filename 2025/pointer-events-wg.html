@@ -157,8 +157,8 @@
           <ul>
             <li>Addition of <a href="https://www.w3.org/TR/pointerevents3/#details-of-touch-action-values">direction-specific values for <code>touch-action</code></a>, giving finer-grained control of panning touch behaviors</li>
             <li>Clarifying relationship between pointer events and other behaviors/event models, such as mouse events, pointer lock, and drag and drop</li>
-			<li>Exploration of how basic high-level gestures &mdash; such as "swipe left" or "two-finger tap" &mdash; could be exposed to web content authors</li>
-            <li>Additional clarifications of API behavior and performance optimizations (see <a href="https://github.com/w3c/pointerevents/issues?q=is%3Aissue+is%3Aopen+label%3Av3">issues marked for future consideration in GitHub</a>)</li>
+			<li>Support for simplified basic high-level gestures for common interaction, such as "swipe left" or "two-finger tap"</li>
+            <li>Additional clarifications of API behavior and performance optimizations (see <a href="https://github.com/w3c/pointerevents/issues?q=is%3Aissue+is%3Aopen+label%3Av4">issues marked for future consideration in GitHub</a>)</li>
           </ul>
 
         <section id="section-out-of-scope">
@@ -172,7 +172,7 @@
                   <li>Comparisons between time stamps of pointers to determine an action.</li>
                   <li>Comparisons between combinations of pointers and/or their time stamps to determine an action.</li>
                   <li>Determining an action based on comparison to a threshold (e.g., scroll speed based on a pressure threshold, panning based on distance threshold, press-and-hold based on a timing threshold).</li>
-                  <li>APIs or functionality processing data that is indicative of a confidence level that a pointer is associated with a gesture.</li>
+                  <li>APIs for interpreting abstract user intent that a pointer is associated with a gesture.</li>
                 </ul>
               </li>
 
@@ -315,6 +315,10 @@ interoperability can be verified by passing open test suites. In order to advanc
         <section>
           <h3 id="w3c-coordination">W3C Groups</h3>
           <dl>
+           <dt><a href="https://www.w3.org/groups/wg/css">Cascading Style Sheets (CSS) Working Group</a></dt>
+           <dd>
+              This Group develops the CSS specifications that define the visual rendering of web content. Coordination with this Group is needed for new values for the <code>touch-action</code> CSS property defined in the <a href="https://www.w3.org/TR/pointerevents/#the-touch-action-css-property">Pointer Events specification</a>.
+           </dd>
            <dt><a href="https://www.w3.org/groups/wg/das">Devices and Sensors Working Group</a></dt>
             <dd>
               The mission of the Devices and Sensors Working Group (DAS WG) is to create secure and privacy-preserving client-side APIs that enable the development of web applications that interact with device capabilities.
