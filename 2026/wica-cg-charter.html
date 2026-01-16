@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Web Identity & Credentials Adoption Community Group Charter</title>
+
+  <link rel="stylesheet" href="https://www.w3.org/2005/10/w3cdoc.css" type="text/css" media="screen">
+  <link rel="stylesheet" type="text/css" href="https://www.w3.org/OldGuide/pubrules-style.css">
+  <link rel="stylesheet" type="text/css" href="https://www.w3.org/2006/02/charter-style.css">
+  <style>
+    ul#navbar {
+      font-size: small;
+    }
+
+    dt.spec {
+      font-weight: bold;
+    }
+
+    dt.spec new {
+      background: yellow;
+    }
+
+    ul.out-of-scope>li {
+      font-weight: bold;
+    }
+
+    ul.out-of-scope>li>ul>li {
+      font-weight: normal;
+    }
+
+    .issue {
+      background: cornsilk;
+      font-style: italic;
+    }
+
+    .todo {
+      color: #900;
+    }
+
+    footer {
+      font-size: small;
+    }
+  </style>
+</head>
+
+<body>
+  <header id="header">
+    <aside>
+      <ul id="navbar">
+        <li><a href="#mission">Mission</a></li>
+        <li><a href="#scope">Scope</a></li>
+        <li><a href="#deliverables">Deliverables</a></li>
+        <li><a href="#coordination">Coordination</a></li>
+        <li><a href="#participation">Participation</a></li>
+        <li><a href="#communication">Communication</a></li>
+        <li><a href="#decisions">Decision Policy</a></li>
+        <li><a href="#cla">CLA</a></li>
+        <li><a href="#about">About this Charter</a></li>
+      </ul>
+    </aside>
+    <p>
+      <a href="https://www.w3.org/"><img alt="W3C" height="120"
+          src="https://www.w3.org/assets/logos/w3c-2025/svg/w3c.svg" width="120"></a>
+    </p>
+  </header>
+
+
+  <main>
+    <h1 id="title">DRAFT Web Identity & Credentials Adoption Community Group Charter</h1>
+
+    <p class="mission">The <strong>mission</strong> of the <a href="https://www.w3.org/groups/cg/wica/">Web Identity &
+        Credentials Adoption Community Group</a> is to accelerate the adoption and improve the developer experience of
+      emerging web identity and digital credential technologies. The group will achieve this by creating best-practice
+      guidance, developing targeted educational content, and fostering a collaborative environment for developers and
+      ecosystem stakeholders. Our goal is to help build a more secure, private, and user-friendly web by making powerful
+      web identity APIs easier to understand and implement.</p>
+
+    <div class="noprint">
+      <p class="join"><a href="https://www.w3.org/groups/cg/wica/join/">Join the Web Identity & Credentials Adoption
+          Community Group.</a></p>
+    </div>
+
+    <div id="details">
+      <table class="summary-table">
+        <tr id="Status">
+          <th>
+            Charter Status
+          </th>
+          <td>
+            See the <a href="https://www.w3.org/groups/cg/wica/">group status page</A>.
+          </td>
+        </tr>
+        <tr id="Duration">
+          <th>
+            Start date
+          </th>
+          <td>
+            <i class="todo">2025-09-09</i>
+          </td>
+        </tr>
+        <tr id="CharterEnd">
+          <th>
+            End date
+          </th>
+          <td>
+            <i class="todo">No scheduled end date.</i>
+          </td>
+        </tr>
+        <tr>
+          <th>
+            Chairs
+          </th>
+          <td>
+            Tim Cappalli (Okta)
+          </td>
+        </tr>
+        <tr>
+          <th>
+            Team Contacts
+          </th>
+          <td>
+            None
+          </td>
+        </tr>
+        <tr>
+          <th>
+            Meeting Schedule
+          </th>
+          <td>
+            <strong>Teleconferences:</strong> Monthly check-in meetings. Meeting details and notes will be made public.
+          </td>
+        </tr>
+      </table>
+
+    </div>
+    <div id="background" class="background">
+      <h2>Motivation and Background</h2>
+      <p>This is somewhat of a reincarnation of the old WebAuthn Adoption Community Group, but with a focus on the wider
+        web identity ecosystem, to include verifiable digital credentials and federation. With the rapid evolution of
+        web identity standards such as Web Authentication (WebAuthn), Digital Credentials (DC) API, and Federated
+        Credential Management (FedCM) API, there is a growing need for practical guidance to help developers effectively
+        implement these technologies, on their own, and together. While these standards promise enhanced security,
+        privacy, and user experience, their adoption has been hindered by a lack of clear, developer-friendly resources
+        and best practices.</p>
+    </div>
+
+    <section id="scope" class="scope">
+      <h2>Scope</h2>
+      <p>The group will focus its efforts on the practical application and integration of key W3C APIs related to
+        identity and credentials. The scope of our work includes:</p>
+
+      <ul>
+        <li>
+          <strong>Develop Best Practice Guidance:</strong> Create and maintain comprehensive best practice documents for
+          the implementation of:
+          <ul>
+            <li>Passkeys using the Web Authentication (WebAuthn) API.</li>
+            <li>Verifiable digital credentials using the Digital Credentials (DC) API.</li>
+            <li>Federated sign-in using the Federated Credential Management (FedCM) API.</li>
+          </ul>
+        </li>
+        <li><strong>Integrated User Experience:</strong> Develop best practice content and illustrative examples for
+          using these APIs in combination to create seamless, secure, and delightful user experiences across different
+          identity and credentialing scenarios.</li>
+        <li><strong>Developer-Focused Content Creation:</strong> Produce practical, high-quality, developer-focused
+          content, including tutorials, guides, and code samples. This content will be published on community-oriented
+          sites such as passkeys.dev and digitalcredentials.dev to serve as a primary resource for implementers.</li>
+        <li><strong>Developer Discussion Venue:</strong> Offer a public forum for developers to discuss challenges, ask
+          questions, and share solutions related to implementing these APIs and navigating the surrounding ecosystem.
+        </li>
+        <li><strong>Ecosystem Updates and Collaboration:</strong> Provide a venue for community members to share updates
+          on browser implementations, specification changes, tooling, and other relevant developments within the web
+          identity ecosystem.</li>
+      </ul>
+
+      <section id="section-out-of-scope">
+        <h3 id="out-of-scope">Out of Scope</h3>
+        <p>This Community Group will not create new specifications or standards. The focus is strictly on the adoption
+          and practical implementation of existing and emerging standards developed by W3C Working Groups, the FIDO
+          Alliance, the OpenID Foundation, and other relevant standards bodies. The group will provide feedback on
+          developer experience to the appropriate Working Groups but will not engage in normative specification work
+          itself.</p>
+      </section>
+    </section>
+
+    <section id="deliverables">
+      <h2>
+        Deliverables
+      </h2>
+      <section id="other-deliverables">
+        <h3>
+          Documentation & Feedback
+        </h3>
+        <p>
+          The group will create:
+        </p>
+        <ul>
+          <li><strong>Developer Guides and Tutorials:</strong> Educational content published on passkeys.dev,
+            digitalcredentials.dev, and potentially other platforms.</li>
+          <li><strong>Developer Tools:</strong> Developer tools to test, debug, and plan implementations, available on
+            passkeys.dev, digitalcredentials.dev, and potentially other platforms.</li>
+        </ul>
+        This group will also serve as a feedback channel for developer challenges and feedback to be shared with
+        relevant W3C, FIDO Alliance, and OpenID Foundation Working Groups.
+      </section>
+
+    </section>
+
+    <section id="success-criteria">
+      <h2>Success Criteria</h2>
+      <p>
+        This Community Group is a long-term initiative focused on improving developer experiences, maintaining ecosystem
+        documentation, and aggregating tooling feedback.
+      </p>
+      <p>
+        Success for this group is defined by:
+      </p>
+      <ul>
+        <li>
+          <strong>Sustained Content Creation:</strong> Regular contributions of high-quality tutorials, guides, and best
+          practices to community resources such as <a href="https://passkeys.dev">passkeys.dev</a> and <a
+            href="https://digitalcredentials.dev">digitalcredentials.dev</a>.
+        </li>
+        <li>
+          <strong>Ecosystem Feedback Loop:</strong> The effective collection and transmission of developer friction
+          points and implementation challenges to the relevant W3C Working Groups and external standards bodies (e.g.,
+          FIDO Alliance, OIDF).
+        </li>
+        <li>
+          <strong>Community Engagement:</strong> A consistent level of activity in the group's communication channels,
+          fostering a supportive environment for developers implementing identity standards.
+        </li>
+      </ul>
+    </section>
+
+    <section id="coordination">
+      <h2>Coordination</h2>
+      <p>The group focuses on the adoption of standards developed by the following organizations:</p>
+
+      <section>
+        <h3 id="w3c-coordination">W3C Groups</h3>
+        <dl>
+          <dt><a href="https://www.w3.org/groups/wg/webauthn/"><i class="todo">Web Authentication</i> Working Group</a>
+          </dt>
+          <dt><a href="https://www.w3.org/groups/wg/fedid/"><i class="todo">Federated Identity</i> Working Group</a>
+          </dt>
+        </dl>
+      </section>
+      <section>
+        <h3 id="external-coordination">External Organizations</h3>
+        <dl>
+          <dt>FIDO Alliance</dt>
+          <dd>FIDO2 Technical Working Group (FIDO2 TWG), Digital Credentials Working Group (DCWG), User Experience
+            Working Group (UXWG), Consumer Deployment Working Group (CDWG), Enterprise Deployment Working Group (EDWG)
+          </dd>
+          <dt>OpenID Foundation</dt>
+          <dd>Digital Credential Protocols (DCP) Working Group</dd>
+        </dl>
+      </section>
+    </section>
+
+    <section class="participation">
+      <h2 id="participation">
+        Participation
+      </h2>
+      <p>
+        This Community Group is open to all. The group encourages questions, comments and issues on its public mailing
+        lists and document repositories, as described in <a href='#communication'>Communication</a>.
+      </p>
+      <p>Participants in the group are required (by the <a
+          href="https://www.w3.org/policies/process/#ParticipationCriteria">W3C Process</a>) to follow the
+        W3C <a href="https://www.w3.org/policies/code-of-conduct/">Code of Conduct</a>.</p>
+    </section>
+
+    <section id="communication">
+      <h2>
+        Communication
+      </h2>
+      <p>This Community Group will conduct its work in the open. All work and communication will happen in English.</p>
+
+      <p>The following communication channels will be used:</p>
+
+      <ul>
+        <li><strong>Primary Discussion:</strong> A Slack channel will be created in the W3C Community instance, called
+          <code>#wica-cg</code>.
+        </li>
+        <li><strong>Work Repository:</strong> No dedicated repository is planned for this CG. Meeting notes will be
+          linked in the meeting details.</li>
+        <li><strong>Teleconferences:</strong> Monthly virtual meetings to serve as check-ins and ecosystem discussions.
+          Meeting details and notes will be made public.</li>
+        <li><strong>Website(s):</strong> Content will be published to passkeys.dev and digitalcredentials.dev.</li>
+      </ul>
+
+    </section>
+
+    <section id="decisions">
+      <h2>
+        Decision Policy
+      </h2>
+      <p>
+        This group will seek to make decisions through consensus. The Chair will facilitate discussions to build
+        consensus. If consensus cannot be reached on an issue, the Chair may record the differing opinions and move on.
+        Any formal decisions, such as the publication of a report, will be confirmed by a consensus call on the group's
+        mailing list.
+      </p>
+    </section>
+
+    <section id="cla">
+      <h2>
+        Contributor License Agreement (CLA)
+      </h2>
+      <p>
+        By participating in this group, contributors agree to the terms of the <a
+          href="https://www.w3.org/community/about/agreements/cla/">W3C Community Contributor License Agreement
+          (CLA)</a>.
+      </p>
+    </section>
+
+    <section id="about">
+      <h2>
+        About this Charter
+      </h2>
+      <p>
+        This charter has been created according to <a href="https://www.w3.org/policies/process/#GAGeneral">section
+          3.4</a> of the <a href="https://www.w3.org/policies/process/">Process Document</a>. In the event of a conflict
+        between this document or the provisions of any charter and the W3C Process, the W3C Process shall take
+        precedence.
+      </p>
+    </section>
+  </main>
+
+  <hr>
+
+  <footer>
+    <address>
+      Chair: <a href="mailto:tim.cappalli@okta.com">Tim Cappalli</a>
+    </address>
+
+    <p class="copyright">Copyright © 2026 <a href="https://www.w3.org/">World Wide Web Consortium</a>.<br>
+      <abbr title="World Wide Web Consortium">W3C</abbr><sup>®</sup>
+      <a href="https://www.w3.org/policies/#disclaimers">liability</a>,
+      <a href="https://www.w3.org/policies/#trademarks">trademark</a> and
+      <a rel="license" href="https://www.w3.org/copyright/software-license/"
+        title="W3C Software and Document Notice and License">permissive document license</a> rules apply.
+    </p>
+  </footer>
+</body>
+</html>
