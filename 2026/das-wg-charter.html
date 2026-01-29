@@ -171,7 +171,15 @@
 
       <div id="background" class="background">
         <h2>Motivation and Background</h2>
-        <p><i class="todo">Short text to be picked up from Scope.</i></p>
+        <p>
+          Specifications produced by the Devices and Sensors Working Group enable web applications to make
+          use of widely available device capabilities by providing client-side APIs that enable modern,
+          context-aware, and interactive application experiences.
+		</p>
+        <p>
+          The Devices and Sensors Working Group is committed to security and privacy focused and use case
+          driven specification development.
+        </p>
       </div>
 
       <section id="scope" class="scope">
@@ -601,6 +609,21 @@
             </p>
             <p><b>Exclusion Draft Charter:</b> Produced under Working Group Charter: <a href="https://www.w3.org/2024/02/das-wg-charter.html">https://www.w3.org/2024/02/das-wg-charter.html</a></p>
           </dd>
+          <dt><a href="https://www.w3.org/TR/vibration/">Vibration API</a></dt>
+          <dd>
+            <p>
+              An API that provides access to the vibration mechanism of the hosting device. Vibration is a form of tactile feedback.
+            </p>
+            <p><b>Draft state</b>: Candidate Recommendation</p>
+            <p class="milestone"><b>Expected completion:</b> <i class="todo">[Q1–4 yyyy]</i></p>
+            <p><b>Adopted Draft</b>: <a href="https://www.w3.org/TR/2025/CRD-vibration-20250212/">https://www.w3.org/TR/2025/CRD-vibration-20250212/</a> (12 February 2025)</p>
+            <p>
+              <b>Exclusion Draft:</b>
+                <a href="https://www.w3.org/TR/2024/CR-vibration-20241128/">https://www.w3.org/TR/2024/CR-vibration-20241128/</a> (28 November 2024)<br>
+                associated <a href="https://www.w3.org/mid/cfe-14788-4a262edfcca765aced41dbe8c82f8c49d87e0c49@w3.org">Call for Exclusion</a> on 2024-11-28, opportunity until 2025-01-27
+            </p>
+            <p><b>Exclusion Draft Charter:</b> Produced under Working Group Charter: <a href="https://www.w3.org/2024/02/das-wg-charter.html">https://www.w3.org/2024/02/das-wg-charter.html</a></p>
+          </dd>
         </dl>
         </section>
         <section id="tentative">
@@ -669,8 +692,6 @@
           The Working Group will maintain errata and new editions, as
           necessary, for the <a href=
           "https://www.w3.org/TR/2022/REC-geolocation-20220901/">Geolocation
-          API</a>, <a href=
-          "https://www.w3.org/TR/2016/REC-vibration-20161018/">Vibration
           API</a>, and <a href=
           "https://www.w3.org/TR/2018/REC-html-media-capture-20180201/">HTML
           Media Capture</a> W3C Recommendations.
@@ -796,55 +817,6 @@
           <li><a href="https://www.w3.org/TR/privacy-principles/">Privacy Principles</a>,</li>
           <li><a href="https://www.w3.org/TR/design-principles/">Web Platform Design Principles</a>.</li>
         </ul>
-
-        <p class="wg-specific">
-          APIs that cannot be demonstrated to be implementable securely within
-          the default browser context will not be released.
-        </p>
-        <p class="wg-specific">
-          The specifications produced by this WG must mitigate disclosure of
-          data when possible and seek meaningful user consent in other cases.
-          If the WG decides that one or more of its specifications cannot be
-          usefully implemented while simultaneously allowing users to
-          meaningfully consent to the use of sensitive data, it should not
-          advance those specifications.
-        </p>
-
-          <p class="wg-specific">
-            The Devices and Sensors WG will follow a <a href=
-            "https://www.w3.org/policies/testing/#test-as-you-commit">test as you
-            commit</a> approach to specification development, for
-            specifications in CR or above.
-            <i class="todo">Update text (esp. 2nd paragraph) to align with the newest text?</i>
-          </p>
-          <blockquote cite="https://www.w3.org/policies/testing/#test-as-you-commit">
-            <p>
-              All normative spec changes are generally expected to have a
-              corresponding pull request in <a href=
-              "https://github.com/web-platform-tests/wpt">web-platform-tests</a>,
-              either in the form of new tests or modifications to existing
-              tests, or must include the rationale for why test updates are not
-              required for the proposed update.
-            </p>
-            <p>
-              Typically, both pull requests (spec updates and tests) will be
-              merged at the same time. If a pull request for the specification
-              is approved but the other needs more work, add the '<a href=
-              "https://w3c.github.io/issue-metadata.html" rel="nofollow">needs
-              tests</a>' label or, in web-platform-tests, the '<a href=
-              "https://github.com/web-platform-tests/wpt/issues?utf8=%E2%9C%93&amp;q=label%3Astatus%3Aneeds-spec-decision%20">status:needs-spec-decision</a>'
-              label. Note that a test change that contradicts the specification
-              should not be merged before the corresponding specification
-              change.
-            </p>
-            <p>
-              If testing is not practical due to web-platform-tests
-              limitations, please explain why and if appropriate file an issue
-              with the '<a href=
-              "https://github.com/web-platform-tests/wpt/issues?utf8=%E2%9C%93&amp;q=label%3Atype%3Auntestable%20">type:untestable</a>'
-              label to follow up later.
-            </p>
-          </blockquote>
       </section>
       <section id="coordination" class="dependencies">
         <h2>
@@ -1319,7 +1291,8 @@
                 </td>
                 <td>
                   Geolocation Sensor as Discontinued Draft.<br>
-                  Adding Web Serial API in WICG as Tentative Deliverables.
+                  Adding Web Serial API in WICG as Tentative Deliverables.<br>
+				          Moved Vibration API from maintenance to normative deliverables.
                 </td>
               </tr>
           </tbody>
