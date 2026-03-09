@@ -191,38 +191,107 @@
             The Web Performance Working Group will deliver the following W3C normative specifications:
           </p>
  <dl>
-	 <dt id="loaf" class="spec"><a href="https://www.w3.org/TR/long-animation-frames/" rel='versionof'>Long Animation Frames</a></dt>
-	 <dd>
-		 <p>This document defines an API that web page authors can use to detect presence of "long animation frames" that monopolize the UI thread for extended periods of time and block other critical tasks from being executed - e.g. reacting to user input.</p>
-		 <p><b>Draft state:</b>editors draft</p>
-		 <p><b>Expected completion:</b> @@TBD</p>
-	 </dd>
-                                            <dt id="performance-timeline-1" class="spec"><a href="https://www.w3.org/TR/performance-timeline/" rel='versionof'>Performance Timeline</a></dt>
+	
+	    <dt id="hr-time-3" class="spec"><a href="https://www.w3.org/TR/hr-time-3/" rel='versionof'>High Resolution Time</a></dt>
+                        <dd>
+                            <p>This specification defines an API that provides the current time in sub-millisecond resolution and such that it is not subject to system clock skew or adjustments.</p>
+                            <p><b>Draft state:</b> Working Draft</p>
+                            <p><b>Expected completion:</b> Expected CR in 2026</p>
+                            <p><b>Latest publication:</b> <a href='https://www.w3.org/TR/2024/WD-hr-time-3-20241107/'>2024-11-07</a></p>
+                            <p><b>Exclusion Draft:</b>
+                                <a href='https://www.w3.org/TR/2020/WD-hr-time-3-20201001/'>https://www.w3.org/TR/2020/WD-hr-time-3-20201001/</a><br>
+                                <a href='https://www.w3.org/mid/cfe-7595-6674c137d260d9630d25a2f4d17e1afaa452b935@w3.org'>Exclusion period</a>
+                                began on 2020-10-01 and
+                                ended on 2021-02-28.
+                            </p>
+                            <p><b>Exclusion Draft Charter</b>: Produced under Working Group Charter:
+                                                                    <a href='https://www.w3.org/2018/09/webperf/'>https://www.w3.org/2018/09/webperf/</a>                                                            </p>
+                        </dd>
+                                            <dt id="performance-timeline" class="spec"><a href="https://www.w3.org/TR/performance-timeline/" rel='versionof'>Performance Timeline</a></dt>
                         <dd>
                             <p> This specification defines an interface for web applications to access timing information related to navigation and elements. It is used by other specifications, like User Timing. </p>
                             <p><b>Draft state:</b> CRD</p>
                             <p><b>Expected completion:</b> Maintained in CR</p>
                             <p><b>Latest publication:</b> <a href='https://www.w3.org/TR/2025/CRD-performance-timeline-20250521/'>2025-05-21</a></p>
                             <p><b>Exclusion Draft:</b>
-                                <a href='https://www.w3.org/TR/2012/WD-performance-timeline-20120508/'>https://www.w3.org/TR/2012/WD-performance-timeline-20120508/</a><br>
-                                <a href='https://lists.w3.org/Archives/Member/member-cfe/2012May/0002.html'>Exclusion period</a>
-                                began on 2012-05-08 and
-                                ended on 2012-07-07.
+								
+                                <a href='https://www.w3.org/TR/2021/CR-performance-timeline-20211202/'>https://www.w3.org/TR/2021/CR-performance-timeline-20211202/</a><br>
+                                <a href='https://lists.w3.org/Archives/Member/member-cfe/2021Dec/0001.html'>Exclusion period</a> began on 2021-12-02 and ended on 2022-01-31.
                             </p>
                             <p><b>Exclusion Draft Charter</b>: Produced under Working Group Charter:
-                                                                    <a href="https://www.w3.org/2011/04/webperf">http://www.w3.org/2011/04/webperf</a>                                                            </p>
+                                                                    <a href="https://www.w3.org/2021/02/webperf.html">https://www.w3.org/2021/02/webperf.html</a>                                                            </p>
+                        </dd>
+	    <dt id="resource-timing" class="spec"><a href="https://www.w3.org/TR/resource-timing/" rel='versionof'>Resource Timing</a></dt>
+                        <dd>
+                            <p>This specification defines an interface for web applications to access the complete timing information for resources in a document.</p>
+                            <p><b>Draft state:</b> CRD</p>
+                            <p><b>Expected completion:</b> Maintained in CR</p>
+                            <p><b>Latest publication:</b> <a href='https://www.w3.org/TR/2025/CRD-resource-timing-20251209/'>2025-12-09</a></p>
+                            <p><b>Exclusion Draft:</b>
+                                <a href='https://www.w3.org/TR/2022/CR-resource-timing-20221004/'>https://www.w3.org/TR/2022/CR-resource-timing-20221004/</a><br>
+                                <a href='https://www.w3.org/mid/cfe-10545-142d196cdd3f1178cf3f3484a5864f3857420b4a@w3.org'>Exclusion period</a>
+                                began on 2022-10-04 and
+                                ended on 2022-12-03.
+                            </p>
+                            <p><b>Exclusion Draft Charter</b>: Produced under Working Group Charter:
+                                                                    <a href='https://www.w3.org/2021/02/webperf.html'>https://www.w3.org/2021/02/webperf.html</a>                                                            </p>
+                        </dd>
+	   <dt id="navigation-timing-2" class="spec"><a href="https://www.w3.org/TR/navigation-timing-2/" rel='versionof'>Navigation Timing</a></dt>
+                        <dd>
+                            <p>This document provides an interface for web applications to access timing information related to navigation and elements.</p>
+                            <p><b>Draft state:</b> Working Draft</p>
+                            <p><b>Expected completion:</b> Expected CR in 2026, maintained in CR</p>
+                            <p><b>Latest publication:</b> <a href='https://www.w3.org/TR/2025/WD-navigation-timing-2-20251205/'>2025-12-05</a></p>
+                            <p><b>Exclusion Draft:</b>
+                                <a href='https://www.w3.org/TR/2013/WD-navigation-timing-2-20130131/'>https://www.w3.org/TR/2013/WD-navigation-timing-2-20130131/</a><br>
+                                <a href='https://lists.w3.org/Archives/Member/member-cfe/2013Jan/0014.html'>Exclusion period</a>
+                                began on 2013-01-31 and
+                                ended on 2013-06-30.
+                            </p>
+                            <p><b>Exclusion Draft Charter</b>: Produced under Working Group Charter: <a href="https://www.w3.org/2013/01/webperf">https://www.w3.org/2013/01/webperf</a>
+                                                            </p>
+                        </dd>
+	   <dt id="user-timing" class="spec"><a href="https://www.w3.org/TR/user-timing/" rel='versionof'>User Timing</a></dt>
+                        <dd>
+                            <p>This specification defines an interface to help web developers measure the performance of their applications by giving them access to high precision timestamps.</p>
+                            <p><b>Draft state:</b> CRD</p>
+                            <p><b>Expected completion:</b> Maintained in CR</p>
+                            <p><b>Latest publication:</b> <a href='https://www.w3.org/TR/2025/CRD-user-timing-20250213/'>2025-02-13</a></p>
+                            <p><b>Exclusion Draft:</b>
+                                <a href='https://www.w3.org/TR/2021/CR-user-timing-20211202/'>https://www.w3.org/TR/2021/CR-user-timing-20211202/</a><br>
+                                <a href='https://www.w3.org/mid/cfe-8933-2ae2f04ad43660c25b4e8672a9f94dac65a9177d@w3.org'>Exclusion period</a>
+                                began on 2021-12-02 and
+                                ended on 2022-01-31.
+                            </p>
+                            <p><b>Exclusion Draft Charter</b>: Produced under Working Group Charter:
+                                                                    <a href='https://www.w3.org/2021/02/webperf.html'>https://www.w3.org/2021/02/webperf.html</a>                                                            </p>
                         </dd>
                                             <dt id="beacon" class="spec"><a href="https://www.w3.org/TR/beacon/" rel='versionof'>Beacon</a></dt>
                         <dd>
                             <p>This specification defines an interoperable means for site developers to asynchronously transfer data from the user agent to a web server, with the user agent taking the responsibility to eventually send the data.</p>
                             <p><b>Draft state:</b> CRD</p>
-                            <p><b>Expected completion:</b> @@TBD </p>
+                            <p><b>Expected completion:</b> Expected Recommendation in 2026</p>
                             <p><b>Latest publication:</b> <a href='https://www.w3.org/TR/2022/CRD-beacon-20220803/'>2022-08-03</a></p>
                             <p><b>Exclusion Draft:</b>
                                 <a href='https://www.w3.org/TR/2017/CR-beacon-20170413/'>https://www.w3.org/TR/2017/CR-beacon-20170413/</a><br>
                                 <a href='https://lists.w3.org/Archives/Member/member-cfe/2017Apr/0004.html'>Exclusion period</a>
                                 began on 2017-04-13 and
                                 ended on 2017-06-12.
+                            </p>
+                            <p><b>Exclusion Draft Charter</b>: Produced under Working Group Charter:
+                                                                    <a href='https://www.w3.org/2016/07/webperf'>https://www.w3.org/2016/07/webperf</a>                                                            </p>
+                        </dd>
+	   <dt id="paint-timing" class="spec"><a href="https://www.w3.org/TR/paint-timing/" rel='versionof'>Paint Timing</a></dt>
+                        <dd>
+                            <p>This document defines an API that can be used to capture a series of key moments (First Paint, First Contentful Paint) during pageload which developers care about.</p>
+                            <p><b>Draft state:</b> Working Draft</p>
+                            <p><b>Expected completion:</b> @@TBD CR?</p>
+                            <p><b>Latest publication:</b> <a href='https://www.w3.org/TR/2026/WD-paint-timing-20260107/'>2026-01-07</a></p>
+                            <p><b>Exclusion Draft:</b>
+                                <a href='https://www.w3.org/TR/2017/WD-paint-timing-20170907/'>https://www.w3.org/TR/2017/WD-paint-timing-20170907/</a><br>
+                                <a href='https://lists.w3.org/Archives/Member/member-cfe/2017Sep/0001.html'>Exclusion period</a>
+                                began on 2017-09-07 and
+                                ended on 2018-02-04.
                             </p>
                             <p><b>Exclusion Draft Charter</b>: Produced under Working Group Charter:
                                                                     <a href='https://www.w3.org/2016/07/webperf'>https://www.w3.org/2016/07/webperf</a>                                                            </p>
@@ -244,82 +313,7 @@ the server to the user agent.</p>
                             <p><b>Exclusion Draft Charter</b>: Produced under Working Group Charter:
                                                                     <a href="https://www.w3.org/2013/01/webperf">http://www.w3.org/2013/01/webperf</a>                                                            </p>
                         </dd>
-                                            <dt id="longtasks-1" class="spec"><a href="https://www.w3.org/TR/longtasks-1/" rel='versionof'>Long Tasks API</a></dt>
-                        <dd>
-                            <p>This document defines an API that web page authors can use to detect presence of “long tasks” that monopolize the UI thread for extended periods of time and block other critical tasks from being executed - e.g. reacting to user input.</p>
-                            <p><b>Draft state:</b> Working Draft</p>
-                            <p><b>Expected completion:</b> @@TBD  was expected to enter CR </p>
-                            <p><b>Latest publication:</b> <a href='https://www.w3.org/TR/2024/WD-longtasks-1-20240524/'>2024-05-24</a></p>
-                            <p><b>Exclusion Draft:</b>
-                                <a href='https://www.w3.org/TR/2017/WD-longtasks-1-20170907/'>https://www.w3.org/TR/2017/WD-longtasks-1-20170907/</a><br>
-                                <a href='https://lists.w3.org/Archives/Member/member-cfe/2017Sep/0001.html'>Exclusion period</a>
-                                began on 2017-09-07 and
-                                ended on 2018-02-04.
-                            </p>
-                            <p><b>Exclusion Draft Charter</b>: Produced under Working Group Charter:
-                                                                    <a href='https://www.w3.org/2016/07/webperf'>https://www.w3.org/2016/07/webperf</a>                                                            </p>
-                        </dd>
-                                            <dt id="hr-time-3" class="spec"><a href="https://www.w3.org/TR/hr-time-3/" rel='versionof'>High Resolution Time</a></dt>
-                        <dd>
-                            <p>This specification defines an API that provides the current time in sub-millisecond resolution and such that it is not subject to system clock skew or adjustments.</p>
-                            <p><b>Draft state:</b> Working Draft</p>
-                            <p><b>Expected completion:</b> @TBD level3 not yet in CR</p>
-                            <p><b>Latest publication:</b> <a href='https://www.w3.org/TR/2024/WD-hr-time-3-20241107/'>2024-11-07</a></p>
-                            <p><b>Exclusion Draft:</b>
-                                <a href='https://www.w3.org/TR/2020/WD-hr-time-3-20201001/'>https://www.w3.org/TR/2020/WD-hr-time-3-20201001/</a><br>
-                                <a href='https://www.w3.org/mid/cfe-7595-6674c137d260d9630d25a2f4d17e1afaa452b935@w3.org'>Exclusion period</a>
-                                began on 2020-10-01 and
-                                ended on 2021-02-28.
-                            </p>
-                            <p><b>Exclusion Draft Charter</b>: Produced under Working Group Charter:
-                                                                    <a href='https://www.w3.org/2018/09/webperf/'>https://www.w3.org/2018/09/webperf/</a>                                                            </p>
-                        </dd>
-                                            <dt id="user-timing" class="spec"><a href="https://www.w3.org/TR/user-timing/" rel='versionof'>User Timing</a></dt>
-                        <dd>
-                            <p>This specification defines an interface to help web developers measure the performance of their applications by giving them access to high precision timestamps.</p>
-                            <p><b>Draft state:</b> CRD</p>
-                            <p><b>Expected completion:</b> Maintained in CR</p>
-                            <p><b>Latest publication:</b> <a href='https://www.w3.org/TR/2025/CRD-user-timing-20250213/'>2025-02-13</a></p>
-                            <p><b>Exclusion Draft:</b>
-                                <a href='https://www.w3.org/TR/2021/CR-user-timing-20211202/'>https://www.w3.org/TR/2021/CR-user-timing-20211202/</a><br>
-                                <a href='https://www.w3.org/mid/cfe-8933-2ae2f04ad43660c25b4e8672a9f94dac65a9177d@w3.org'>Exclusion period</a>
-                                began on 2021-12-02 and
-                                ended on 2022-01-31.
-                            </p>
-                            <p><b>Exclusion Draft Charter</b>: Produced under Working Group Charter:
-                                                                    <a href='https://www.w3.org/2021/02/webperf.html'>https://www.w3.org/2021/02/webperf.html</a>                                                            </p>
-                        </dd>
-                                            <dt id="network-error-logging" class="spec"><a href="https://www.w3.org/TR/network-error-logging/" rel='versionof'>Network Error Logging</a></dt>
-                        <dd>
-                            <p>This document defines a mechanism that enables developers to declare a network error reporting policy for a web application. A user agent can use this policy to report encountered network errors that prevented it from successfully fetching requested resources.</p>
-                            <p><b>Draft state:</b> Working Draft</p>
-                            <p><b>Expected completion:</b> @@TBD spec to be removed from REC track?</p>
-                            <p><b>Latest publication:</b> <a href='https://www.w3.org/TR/2025/WD-network-error-logging-20250505/'>2025-05-05</a></p>
-                            <p><b>Exclusion Draft:</b>
-                                <a href='https://www.w3.org/TR/2014/WD-navigation-error-logging-20140211/'>https://www.w3.org/TR/2014/WD-navigation-error-logging-20140211/</a><br>
-                                <a href='https://lists.w3.org/Archives/Member/member-cfe/2014Feb/0008.html'>Exclusion period</a>
-                                began on 2014-02-12 and
-                                ended on 2014-07-12.
-                            </p>
-                            <p><b>Exclusion Draft Charter</b>: Produced under Working Group Charter:
-                                                                    <a href="https://www.w3.org/2013/01/webperf">http://www.w3.org/2013/01/webperf</a>                                                            </p>
-                        </dd>
-                                            <dt id="requestidlecallback" class="spec"><a href="https://www.w3.org/TR/requestidlecallback/" rel='versionof'>requestIdleCallback()</a></dt>
-                        <dd>
-                            <p>The requestIdleCallback method is a more appropriate way for scheduling background tasks during times when the browser would otherwise be idle.</p>
-                            <p><b>Draft state:</b> Working Draft</p>
-                            <p><b>Expected completion:</b>@@TBD  new CR? was left to be integrated in scheduling APIs but not ready</p>
-                            <p><b>Latest publication:</b> <a href='https://www.w3.org/TR/2025/WD-requestidlecallback-20250521/'>2025-05-21</a></p>
-                            <p><b>Exclusion Draft:</b>
-                                <a href='https://www.w3.org/TR/2017/CR-requestidlecallback-20170131/'>https://www.w3.org/TR/2017/CR-requestidlecallback-20170131/</a><br>
-                                <a href='https://lists.w3.org/Archives/Member/member-cfe/2017Feb/0000.html'>Exclusion period</a>
-                                began on 2017-02-02 and
-                                ended on 2017-04-03.
-                            </p>
-                            <p><b>Exclusion Draft Charter</b>: Produced under Working Group Charter:
-                                                                    <a href='https://www.w3.org/2016/07/webperf'>https://www.w3.org/2016/07/webperf</a>                                                            </p>
-                        </dd>
-                                            <dt id="reporting-1" class="spec"><a href="https://www.w3.org/TR/reporting-1/" rel='versionof'>Reporting API</a></dt>
+	  <dt id="reporting-1" class="spec"><a href="https://www.w3.org/TR/reporting-1/" rel='versionof'>Reporting API</a></dt>
                         <dd>
                             <p>The reporting API provides a generic reporting framework which allows Web developers to associate a set of named reporting endpoints with an origin. Various platform features (like Content Security Policy, Network Error Reporting, and others) will use these endpoints to deliver feature-specific reports in a consistent manner.</p>
                             <p><b>Draft state:</b> Working Draft</p>
@@ -334,22 +328,22 @@ the server to the user agent.</p>
                             <p><b>Exclusion Draft Charter</b>: Produced under Working Group Charter:
                                                                     <a href="https://www.w3.org/2015/06/webperf">http://www.w3.org/2015/06/webperf</a>                                                            </p>
                         </dd>
-                                            <dt id="largest-contentful-paint" class="spec"><a href="https://www.w3.org/TR/largest-contentful-paint/" rel='versionof'>Largest Contentful Paint</a></dt>
+	  <dt id="network-error-logging" class="spec"><a href="https://www.w3.org/TR/network-error-logging/" rel='versionof'>Network Error Logging</a></dt>
                         <dd>
-                            <p>This document defines an API that enables monitoring the largest paint an element triggered on screen.</p>
+                            <p>This document defines a mechanism that enables developers to declare a network error reporting policy for a web application. A user agent can use this policy to report encountered network errors that prevented it from successfully fetching requested resources.</p>
                             <p><b>Draft state:</b> Working Draft</p>
-                            <p><b>Expected completion:</b> Expected CR @@TBD</p>
-                            <p><b>Latest publication:</b> <a href='https://www.w3.org/TR/2025/WD-largest-contentful-paint-20250911/'>2025-09-11</a></p>
+                            <p><b>Expected completion:</b> @@TBD spec to be removed from REC track?</p>
+                            <p><b>Latest publication:</b> <a href='https://www.w3.org/TR/2025/WD-network-error-logging-20250505/'>2025-05-05</a></p>
                             <p><b>Exclusion Draft:</b>
-                                <a href='https://www.w3.org/TR/2022/WD-largest-contentful-paint-20220524/'>https://www.w3.org/TR/2022/WD-largest-contentful-paint-20220524/</a><br>
-                                <a href='https://www.w3.org/mid/cfe-9798-39a5654b48a5daf8e3645912999028533184ace6@w3.org'>Exclusion period</a>
-                                began on 2022-05-24 and
-                                ended on 2022-10-21.
+                                <a href='https://www.w3.org/TR/2014/WD-navigation-error-logging-20140211/'>https://www.w3.org/TR/2014/WD-navigation-error-logging-20140211/</a><br>
+                                <a href='https://lists.w3.org/Archives/Member/member-cfe/2014Feb/0008.html'>Exclusion period</a>
+                                began on 2014-02-12 and
+                                ended on 2014-07-12.
                             </p>
                             <p><b>Exclusion Draft Charter</b>: Produced under Working Group Charter:
-                                                                    <a href='https://www.w3.org/2021/02/webperf.html'>https://www.w3.org/2021/02/webperf.html</a>                                                            </p>
+                                                                    <a href="https://www.w3.org/2013/01/webperf">http://www.w3.org/2013/01/webperf</a>                                                            </p>
                         </dd>
-                                            <dt id="event-timing" class="spec"><a href="https://www.w3.org/TR/event-timing/" rel='versionof'>Event Timing API</a></dt>
+	  <dt id="event-timing" class="spec"><a href="https://www.w3.org/TR/event-timing/" rel='versionof'>Event Timing API</a></dt>
                         <dd>
                             <p>This document defines an API that provides web page authors with insights into the latency of certain events triggered by user interactions.</p>
                             <p><b>Draft state:</b> Working Draft</p>
@@ -364,70 +358,60 @@ the server to the user agent.</p>
                             <p><b>Exclusion Draft Charter</b>: Produced under Working Group Charter:
                                                                     <a href='https://www.w3.org/2021/02/webperf.html'>https://www.w3.org/2021/02/webperf.html</a>                                                            </p>
                         </dd>
-                                            <dt id="navigation-timing-2" class="spec"><a href="https://www.w3.org/TR/navigation-timing-2/" rel='versionof'>Navigation Timing Level 2</a></dt>
+
+	   <dt id="largest-contentful-paint" class="spec"><a href="https://www.w3.org/TR/largest-contentful-paint/" rel='versionof'>Largest Contentful Paint</a></dt>
                         <dd>
-                            <p>This document provides an interface for web applications to access timing information related to navigation and elements.</p>
+                            <p>This document defines an API that enables monitoring the largest paint an element triggered on screen.</p>
                             <p><b>Draft state:</b> Working Draft</p>
-                            <p><b>Expected completion:</b> @@TBD Integration into Resource Timing?</p>
-                            <p><b>Latest publication:</b> <a href='https://www.w3.org/TR/2025/WD-navigation-timing-2-20251205/'>2025-12-05</a></p>
+                            <p><b>Expected completion:</b> Expected CR @@TBD</p>
+                            <p><b>Latest publication:</b> <a href='https://www.w3.org/TR/2025/WD-largest-contentful-paint-20250911/'>2025-09-11</a></p>
                             <p><b>Exclusion Draft:</b>
-                                <a href='https://www.w3.org/TR/2013/WD-navigation-timing-2-20130131/'>https://www.w3.org/TR/2013/WD-navigation-timing-2-20130131/</a><br>
-                                <a href='https://lists.w3.org/Archives/Member/member-cfe/2013Jan/0014.html'>Exclusion period</a>
-                                began on 2013-01-31 and
-                                ended on 2013-06-30.
-                            </p>
-                            <p><b>Exclusion Draft Charter</b>: Produced under Working Group Charter:
-                                                            </p>
-                        </dd>
-                                            <dt id="resource-timing" class="spec"><a href="https://www.w3.org/TR/resource-timing/" rel='versionof'>Resource Timing</a></dt>
-                        <dd>
-                            <p>This specification defines an interface for web applications to access the complete timing information for resources in a document.</p>
-                            <p><b>Draft state:</b> CRD</p>
-                            <p><b>Expected completion:</b> Maintained in CR</p>
-                            <p><b>Latest publication:</b> <a href='https://www.w3.org/TR/2025/CRD-resource-timing-20251209/'>2025-12-09</a></p>
-                            <p><b>Exclusion Draft:</b>
-                                <a href='https://www.w3.org/TR/2022/CR-resource-timing-20221004/'>https://www.w3.org/TR/2022/CR-resource-timing-20221004/</a><br>
-                                <a href='https://www.w3.org/mid/cfe-10545-142d196cdd3f1178cf3f3484a5864f3857420b4a@w3.org'>Exclusion period</a>
-                                began on 2022-10-04 and
-                                ended on 2022-12-03.
+                                <a href='https://www.w3.org/TR/2022/WD-largest-contentful-paint-20220524/'>https://www.w3.org/TR/2022/WD-largest-contentful-paint-20220524/</a><br>
+                                <a href='https://www.w3.org/mid/cfe-9798-39a5654b48a5daf8e3645912999028533184ace6@w3.org'>Exclusion period</a>
+                                began on 2022-05-24 and
+                                ended on 2022-10-21.
                             </p>
                             <p><b>Exclusion Draft Charter</b>: Produced under Working Group Charter:
                                                                     <a href='https://www.w3.org/2021/02/webperf.html'>https://www.w3.org/2021/02/webperf.html</a>                                                            </p>
                         </dd>
-                                            <dt id="paint-timing" class="spec"><a href="https://www.w3.org/TR/paint-timing/" rel='versionof'>Paint Timing</a></dt>
+
+	 <dt id="element-timing" class="spec">Element Timing</dt>
+<dd>
+	<p>The Element Timing API enables monitoring when developer-specified image elements or groups of text nodes are displayed on screen.</p>
+	<p><b>Draft state:</b> <a href="https://w3c.github.io/element-timing/">Editors draft</a></p>
+	<p><b>Expected completion:</b> FPWD Q3 2026</p>
+</dd>
+
+	  <dt id="loaf" class="spec"><a href="https://www.w3.org/TR/long-animation-frames/" rel='versionof'>Long Animation Frames</a></dt>
+	 <dd>
+		 <p>This document defines an API that web page authors can use to detect presence of "long animation frames" that monopolize the UI thread for extended periods of time and block other critical tasks from being executed - e.g. reacting to user input.</p>
+		 <p><b>Draft state:</b>editors draft</p>
+		 <p><b>Expected completion:</b> @@TBD</p>
+	 </dd>
+
+	  <h3 id="to-transfer">
+            Past Specifications
+          </h3>
+	 
+                                            <dt id="longtasks-1" class="spec"><a href="https://www.w3.org/TR/longtasks-1/" rel='versionof'>Long Tasks API</a></dt>
                         <dd>
-                            <p>This document defines an API that can be used to capture a series of key moments (First Paint, First Contentful Paint) during pageload which developers care about.</p>
+                            <p>This document defines an API that web page authors can use to detect presence of “long tasks” that monopolize the UI thread for extended periods of time and block other critical tasks from being executed - e.g. reacting to user input.</p>
                             <p><b>Draft state:</b> Working Draft</p>
-                            <p><b>Expected completion:</b> @@TBD CR?</p>
-                            <p><b>Latest publication:</b> <a href='https://www.w3.org/TR/2026/WD-paint-timing-20260107/'>2026-01-07</a></p>
-                            <p><b>Exclusion Draft:</b>
-                                <a href='https://www.w3.org/TR/2017/WD-paint-timing-20170907/'>https://www.w3.org/TR/2017/WD-paint-timing-20170907/</a><br>
-                                <a href='https://lists.w3.org/Archives/Member/member-cfe/2017Sep/0001.html'>Exclusion period</a>
-                                began on 2017-09-07 and
-                                ended on 2018-02-04.
-                            </p>
-                            <p><b>Exclusion Draft Charter</b>: Produced under Working Group Charter:
-                                                                    <a href='https://www.w3.org/2016/07/webperf'>https://www.w3.org/2016/07/webperf</a>                                                            </p>
+                            <p><b>Expected completion:</b> As this is only implemented in a single browser, we plan to transition this work back to WICG</p>
+                            <p><b>Latest publication:</b> <a href='https://www.w3.org/TR/2024/WD-longtasks-1-20240524/'>2024-05-24</a></p>
                         </dd>
+                            
                                             <dt id="device-memory-1" class="spec"><a href="https://www.w3.org/TR/device-memory-1/" rel='versionof'>Device Memory API</a></dt>
                         <dd>
                             <p>This document defines a HTTP Client Hint header to surface device capability for memory i.e. device RAM, in order to enable web apps to customize content depending on device memory constraints.</p>
                             <p><b>Draft state:</b> Working Draft</p>
-                            <p><b>Expected completion:</b> @TBD  expected CR?</p>
+                            <p><b>Expected completion:</b> As this is only implemented in a single browser, we plan to transition the specification back to WICG.</p>
                             <p><b>Latest publication:</b> <a href='https://www.w3.org/TR/2026/WD-device-memory-1-20260119/'>2026-01-19</a></p>
-                            <p><b>Exclusion Draft:</b>
-                                <a href='https://www.w3.org/TR/2018/WD-device-memory-1-20180925/'>https://www.w3.org/TR/2018/WD-device-memory-1-20180925/</a><br>
-                                <a href='https://lists.w3.org/Archives/Member/member-cfe/2018Sep/0003.html'>Exclusion period</a>
-                                began on 2018-09-25 and
-                                ended on 2019-02-22.
-                            </p>
-                            <p><b>Exclusion Draft Charter</b>: Produced under Working Group Charter:
-                                                                    <a href='https://www.w3.org/2018/09/webperf/'>https://www.w3.org/2018/09/webperf/</a>                                                            </p>
                         </dd>
 	 
                                         </dl>
                                                         <h3 id="standards">Standards</h3>
-                <p>List of Standards produced by the Web Performance Working Group.</p>
+                <p>List of Standards produced and maintained by the Web Performance Working Group.</p>
 
                 <dl>
                                     <dt id="navigation-timing" class="spec"><a href="https://www.w3.org/TR/navigation-timing/" rel='versionof'>Navigation Timing</a></dt>
@@ -456,8 +440,6 @@ the server to the user agent.</p>
           </h3>
           <p>The Group maintains two non-normative documents:</p>
           <ul>
-            <li>A <a href="https://w3c.github.io/perf-timing-primer/">Primer for Web Performance Timing APIs</a> document to facilitate the understanding of the interrelationships between its deliverables.<br>
-              Planned work: Updating it to <a href="https://github.com/w3c/web-performance/issues/54">include new specs</a>, remove deprecated ones and more.</li>
             <li>
               A <a href="https://w3c.github.io/perf-security-privacy/">Performance APIs, Security and Privacy document</a><br>
               Planned work: <a href="https://github.com/w3c/web-performance/issues/46">Reviewing and updating the content</a>, 
@@ -467,7 +449,6 @@ the server to the user agent.</p>
           <p>Other non-normative documents may be created such as:</p>
   <ul>
     <li><a href="https://w3c.github.io/perf-security-privacy/">Security and Privacy considerations for Performance APIs</a></li>
-    <li>Test suites for each specification;</li>
     <li>Use cases documents to support development and exploration of performance-critical web platform features and APIs;</li>
     <li>Primer or Best Practice documents to support web developers when designing applications with performance in mind;</li>
     <li>Developer and user guides for its normative specifications;</li>
