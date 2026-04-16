@@ -9,8 +9,7 @@ push access to add a draft charter to the repo,
 
 See [the template](https://w3c.github.io/charter-drafts/charter-template.html)
 
-For W3C Community Groups, please start from the [CG charter template](https://github.com/w3c/cg-charter).
-
+Please **do not** use this repository to propose Community Group charters; use the [w3c-cg/charter-proposals](https://github.com/w3c-cg/charter-proposals/blob/main/README.md) repo for Community Group charter proposals.
 
 # Using the template for a W3C Working Group
 
