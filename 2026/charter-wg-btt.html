@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Testing and Tools Working Group Charter</title>
+    <link rel="stylesheet" type="text/css" href="https://www.w3.org/2026/01/charter-style.css">
+    <meta name="generator" content="w3c-charter-assistant">
+    <script type="application/json" id="charter-assistant-settings">{
+      "group": "wg/browser-tools-testing",
+      "workMode": "cr-snapshot",
+      "a11y-impact": "false",
+      "template": {
+        "sha": "b43b4eb5f52bb0fee2beeb8e98f8266e9ef6ad77",
+        "date": "2026-01-29T10:38:13Z"
+      },
+      "timeStamp": "2026-04-15T09:24:40.288Z"
+    }</script>
+    <script src="https://www.w3.org/PM/Groups/lib/check-charter.js" type="module" id="charter-assistant-checker"></script>
+  </head>
+  <body>
+    <header id="header">
+      <aside>
+        <ul id="navbar">
+          <li><a href="#background">Background</a></li>
+          <li><a href="#scope">Scope</a></li>
+          <li><a href="#deliverables">Deliverables</a></li>
+          <li><a href="#success-criteria">Success Criteria</a></li>
+          <li><a href="#coordination">Coordination</a></li>
+          <li><a href="#participation">Participation</a></li>
+          <li><a href="#communication">Communication</a></li>
+          <li><a href="#decisions">Decision Policy</a></li>
+          
+          <li><a href="#patentpolicy">Patent Policy</a></li>
+          <li></li>
+          <li><a href="#licensing">Licensing</a></li>
+          <li><a href="#about">About this Charter</a></li>
+        </ul>
+      </aside>
+      <p>
+        <a href="https://www.w3.org/"><img alt="W3C" height="120" src="https://www.w3.org/assets/logos/w3c-2025/svg/w3c.svg" width="120"></a>
+      </p>
+    </header>
+
+    <main>
+      <h1 id="title"><i class="todo">DRAFT</i> Browser Testing and Tools Working Group Charter</h1>
+      <!-- replace DRAFT with PROPOSED when the AC review starts -->
+      <!-- delete PROPOSED after AC review completed -->
+
+      <p class="mission">The <strong>mission</strong> of the <a href="https://www.w3.org/groups/wg/browser-tools-testing/">Browser Testing and Tools Working Group</a> is to produce technologies for use in testing, debugging, and troubleshooting of Web applications running in Web browsers.</p>
+      <!-- the link to the group is ALWAYS that available from https://www.w3.org/groups/wg or https://www.w3.org/groups/ig because each group page can then point to a different homepage, but not the other way around. -->
+
+      <div class="noprint">
+        <p class="join"><a href="https://www.w3.org/groups/wg/browser-tools-testing/join/">Join the Browser Testing and Tools Working Group.</a></p>
+      </div>
+
+      <!-- replace "draft charter" with "proposed charter" when the AC review starts -->
+      <!-- replace GitHub link and issues link to the specific charter in GH and its issues repo -->
+      <!-- delete the whole paragraph after AC review completed -->
+      <p class="issue">
+        This proposed charter is available on <a href="https://github.com/w3c/charter-drafts">GitHub</a>.
+        Feel free to raise <a href="https://github.com/w3c/charter-drafts/issues">issues</a></i>.
+      </p>
+
+      <div id="details">
+        <table class="summary-table">
+          <tbody>
+            <tr id="Status">
+              <th>
+                Charter Status
+              </th>
+              <td>
+                See the <a class="" href="https://www.w3.org/groups/wg/browser-tools-testing/charters/">group status page</a> and <a href="#history">detailed change history</a>.
+              </td>
+            </tr>
+            <tr id="Duration">
+              <th>
+                Start date
+              </th>
+              <td>
+                <i class="todo">[dd monthname yyyy] (date of the "Call for Participation", when the charter is approved)</i>
+              </td>
+            </tr>
+            <tr id="CharterEnd">
+              <th>
+                End date
+              </th>
+              <td>
+                <i class="todo">[dd monthname yyyy]</i> (Start date + 2 years)
+              </td>
+            </tr>
+            <tr id="Chairs">
+              <th>
+                Chairs
+              </th>
+              <td>David Burns (W3C Invited Experts)</td>
+            </tr>
+            <tr id="TeamContacts">
+              <th>
+                Team Contacts
+              </th>
+              <td><a href="mailto:fd@w3.org">François Daoust</a> <i class="todo">(0.1 <abbr title="Full-Time Equivalent">FTE</abbr>)</i></td>
+            </tr>
+            <tr id="MeetingSchedule">
+              <th>
+                Meeting Schedule
+              </th>
+              <td>
+                <strong>Teleconferences: The group meets monthly, and may meet on an as-needed basis, up to once a week
+                <br>
+                <strong>Face-to-face:</strong> The group will meet during the W3C's annual Technical Plenary week; additional face-to-face meetings may be scheduled by consent of the participants, usually no more than 3 per year.
+                <br>
+                See also this <a class="" href="https://www.w3.org/groups/wg/browser-tools-testing/calendar/">group calendar</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <section id="background" class="background">
+        <h2>Motivation and Background</h2>
+
+        <p>
+          Automation is essential for web authors to develop and test their web applications across browsers and devices. This automation requires a stable, interoperable API for remote controlling browsers, including loading web applications in a browser, adjusting browser parameters, as well as inspecting and manipulating the DOM, running scripts, and monitoring performances.
+        </p>
+        <p>
+          Proprietary solutions and protocols have emerged, including browser automation frameworks such as <a href="https://www.selenium.dev/">Selenium</a> and <a href="https://pptr.dev/">Puppeteer</a>. The Browser Testing and Tools Working Group leverages these efforts to standardize interoperable protocols and APIs that allow web applications to orchestrate complex automation workflows across browsers.
+        </p>
+        <p>
+          The group published a <a href="https://www.w3.org/TR/webdriver1/">first version of WebDriver</a> as a W3C Recommendation in June 2018. That specification defines an HTTP/JSON remote control protocol and API, which the group continues to develop. The newer <a href="https://www.w3.org/TR/webdriver-bidi/">WebDriver BiDi</a> specification introduces bidirectional communication, permitting events to stream from the user agent to the controlling software, to better match the evented nature of the DOM.
+        </p>
+        <p>
+          Technologies developed by the group are directly used in the <a href="https://web-platform-tests.org">Web Platform Tests</a> project’s <a href="https://github.com/web-platform-tests/wpt/">web-platform-tests</a> test suite to assess interoperability of implementations of web technologies.
+        </p>
+      </section>
+
+      <section id="scope" class="scope">
+        <h2>
+          Scope
+        </h2>
+        <p>The scope of the Browser Testing and Tools Working Group includes protocols and APIs
+          for the purpose of automating testing of Web applications running in browsers—for example,
+          to simulate user actions such as clicking links, entering text, and submitting forms.</p>
+      </section>
+
+      <section id="deliverables">
+        <h2>
+          Deliverables
+        </h2>
+
+        <p>Updated document status is available on the <a href="https://www.w3.org/groups/wg/browser-tools-testing/publications/">group publication status page</a>.</p>
+
+        <p id="draft-state"><i>Draft state</i> indicates the state of the deliverable at the time of the charter approval. The Working Group intends to publish the latest state of their work as Candidate Recommendation (with Snapshots) and does not intend to advance their documents to Recommendation. The Group expects to continuously update the Candidate Recommendation once it reaches that stage.</p>
+
+        <section id="normative">
+          <h3>
+            Normative Specifications
+          </h3>
+          <p>
+            The Working Group will deliver the following W3C normative specifications:
+          </p>
+          
+          <!--  https://www.w3.org/groups/wg/browser-tools-testing/deliverables/ -->
+          <dl data-timestamp="2026-04-15T09:24:40.285Z">
+            <dt id="webdriver2" class="spec"><a href="https://www.w3.org/TR/webdriver2/" rel="versionof">WebDriver</a></dt>
+            <dd>
+              <p>WebDriver is a remote control interface that enables introspection and control of user agents. It provides a platform- and language-neutral wire protocol as a way for out-of-process programs to remotely instruct the behavior of web browsers.</p>
+              <p><b>Draft state:</b> Working Draft</p>
+              <p><b>Latest publication:</b> <a href="https://www.w3.org/TR/2026/WD-webdriver2-20260401/">2026-04-01</a></p>
+              <p><b>Exclusion Draft:</b>
+                  <a href="https://www.w3.org/TR/2019/WD-webdriver2-20190912/">https://www.w3.org/TR/2019/WD-webdriver2-20190912/</a><br>
+                  <a href="https://www.w3.org/mid/cfe-7152-bda2d68e20711107d45980e7009b8c2207fc908c@w3.org">Exclusion period</a>
+                  began on 2019-09-12 and
+                  ended on 2020-02-09.
+              </p>
+              <p><b>Exclusion Draft Charter</b>: Produced under Working Group Charter:
+                                                      <a href="https://www.w3.org/2018/12/browser-testing-tools.html">https://www.w3.org/2018/12/browser-testing-tools.html</a>                                                            </p>
+            </dd>
+            <dt id="webdriver-bidi" class="spec"><a href="https://www.w3.org/TR/webdriver-bidi/" rel="versionof">WebDriver BiDi</a></dt>
+            <dd>
+              <p>The WebDriver Bidirectional Protocol extends WebDriver by introducing a bidirectional communication mechanism; in place of the strict command/response format of WebDriver, that bidirectional communication mechanism permits events to stream from the user agent to the controlling software, better matching the evented nature of the browser DOM.</p>
+              <p><b>Draft state:</b> Working Draft</p>
+              <p><b>Latest publication:</b> <a href="https://www.w3.org/TR/2026/WD-webdriver-bidi-20260319/">2026-03-19</a></p>
+              <p><b>Exclusion Draft:</b>
+                  <a href="https://www.w3.org/TR/2024/WD-webdriver-bidi-20241121/">https://www.w3.org/TR/2024/WD-webdriver-bidi-20241121/</a><br>
+                  <a href="https://www.w3.org/mid/cfe-14760-611027efc611bd4cf44b691939e3231f3ea11d6f@w3.org">Exclusion period</a>
+                  began on 2024-11-21 and
+                  ended on 2025-04-20.
+              </p>
+              <p><b>Exclusion Draft Charter</b>: Produced under Working Group Charter:
+                                                        <a href="https://www.w3.org/2024/btt-wg-charter.html">https://www.w3.org/2024/btt-wg-charter.html</a>                                                            </p>
+            </dd>
+            <dt id="at-driver" class="spec"><a href="https://w3c.github.io/at-driver/">AT Driver</a></dt>
+            <dd>
+              <p>AT Driver defines a protocol for introspection and remote control of assistive technology (AT) such as screen readers, using a bidirectional communication channel.</p>
+              <p class="draft-status"><b>Draft state:</b> <a href="https://w3c.github.io/at-driver/">Editor's Draft</a></p>
+            </dd>
+          </dl>
+        </section>
+
+        <section id="other-deliverables">
+          <h3>
+            Other Deliverables
+          </h3>
+          <p>
+            Other non-normative documents may be created such as:
+          </p>
+          <ul>
+            <li>Use case and requirement documents;</li>
+            <li>Test suite and implementation report for the specification;</li>
+            <li>Primer or Best Practice documents to support web developers when designing applications.</li>
+          </ul>
+        </section>
+      </section>
+
+      <section id="success-criteria">
+        <h2>Success Criteria</h2>
+
+        <!-- Testing and interop -->
+        <p>There should be testing plans for each specification, starting from the earliest drafts.</p>
+        <p>
+          To promote interoperability, all changes made to specifications
+          in Candidate Recommendation
+          or to features that have deployed implementations
+          should have <a href="https://www.w3.org/policies/testing/">tests</a>.
+          Testing efforts should be conducted via the <a href="https://github.com/web-platform-tests/wpt">Web Platform Tests</a> project.</p>
+
+        <!-- Horizontal review -->
+        <p>Each specification should contain separate sections detailing all known security and
+          privacy implications for implementers, Web authors, and users.</p>
+        <p>Each specification should contain a section on accessibility that describes the benefits and impacts, including ways specification features can be used to address them, and recommendations for maximising accessibility in implementations.</p>
+
+        <!-- W3C Statements and Web Platform Design Principles -->
+        <p>This group is expected to be guided by the following documents:</p>
+        <ul>
+          <li><a href="https://www.w3.org/TR/ethical-web-principles/">Ethical Web Principles</a>,</li>
+          <li><a href="https://www.w3.org/TR/privacy-principles/">Privacy Principles</a>,</li>
+          <li><a href="https://www.w3.org/TR/design-principles/">Web Platform Design Principles</a>.</li>
+        </ul>
+
+        <!-- Relevance and momentum -->
+        <p>All new features should have expressions of interest from at least two potential implementors before being incorporated in the specification.</p>
+      </section>
+
+      <section id="coordination">
+        <h2>Coordination</h2>
+        
+        <p>For all specifications, this Working Group will seek <a href="https://www.w3.org/guide/documentreview/#how-to-get-horizontal-review">horizontal review</a> for
+        accessibility, internationalization, privacy, and security with the relevant Working and
+        Interest Groups, and with the <a href="https://www.w3.org/groups/other/tag/" title="Technical Architecture Group">TAG</a>.
+        Invitation for review must be issued during each major standards-track document transition, including
+        <a href="https://www.w3.org/policies/process/#RecsWD" title="First Public Working Draft">FPWD</a>.  The
+        Working Group is encouraged to engage collaboratively with the horizontal review groups throughout development of
+        each specification.  The Working Group is advised to seek a review at least 3 months before first entering
+        <a href="https://www.w3.org/policies/process/#RecsCR" title="Candidate Recommendation">CR</a> and is encouraged
+        to proactively notify the horizontal review groups when major changes occur in a specification following a review.</p>
+
+        <p>Additional technical coordination with the following Groups will be made, per the <a href="https://www.w3.org/policies/process/#WGCharter">W3C Process Document</a>:</p>
+        
+        <section>        
+          <h3 id="w3c-coordination">W3C Groups</h3>
+          <dl>
+            <dt><a href="https://www.w3.org/groups/wg/webapps/">Web Applications Working Group</a></dt>
+            <dd>This group facilitates the development of client-side web applications.</dd>
+            <dt><a href="https://www.w3.org/groups/wg/css/">CSS Working Group</a></dt>
+            <dd>This group develops and maintains CSS.</dd>
+            <dt><a href="https://www.w3.org/groups/ig/me/">Media and Entertainment Interest Group</a></dt>
+            <dd>This group provides a forum for media-related technical discussions to track progress of media features on the Web.</dd>
+            <dt><a href="https://www.w3.org/groups/wg/apa/">Accessible Platform Architectures Working Group</a></dt>
+            <dd>This group ensures W3C specifications provide support for accessibility to people with disabilities, and
+              there is a possibility of relevant accessibility considerations in APIs for browser testing.</dd>
+          </dl>
+        </section>
+
+        <section>          
+          <h3 id="external-coordination">External Organizations</h3>
+          <dl>
+            <dt><a href="https://web-platform-tests.org">Web Platform Tests project</a></dt>
+            <dd>Coordination on mechanisms for automating tests that cannot be written purely using web-platform APIs.</dd>
+            <dt><a href="https://whatwg.org/">WHATWG</a></dt>
+            <dd>Coordination on the <a href="https://testutils.spec.whatwg.org/">Test Utils</a> specification, which defines a set of APIs for use in tests but not suitable to enable for end users — and the primary client for which is the <a href="https://web-platform-tests.org">Web Platform Tests</a> project’s <a href="https://github.com/web-platform-tests/wpt/">web-platform-tests</a> test suite.</dd>
+          </dl>
+        </section>
+      </section>
+
+      <section class="participation">
+        <h2 id="participation">
+          Participation
+        </h2>
+        <p>
+          To be successful, this Working Group is expected to have 6 or more active participants for its duration, including representatives from the key implementors of this specification, and active Editors and Test Leads for each specification. The Chairs, specification Editors, and Test Leads are expected to contribute half of a working day per week towards the Working Group. There is no minimum requirement for other Participants.
+        </p>
+        <p>
+          The group encourages questions, comments and issues on its public mailing lists and document repositories, as described in <a href="#communication">Communication</a>. The group also welcomes non-participants to make technical contributions for ongoing work, provided they agree to the terms of the <a href="https://www.w3.org/policies/patent-policy/">W3C Patent Policy</a>.
+        </p>
+        <p>
+          The Chairs should periodically look through the non-W3C-Member contributors to the Working Group and consider whether each one should be invited to participate as an <a href="https://www.w3.org/invited-experts/">Invited Expert</a>. If a non-W3C-Member contributor would like to participate in meetings, they are encouraged to <a href="https://www.w3.org/groups/wg/browser-tools-testing/instructions/">apply to be an Invited Expert</a>.
+        </p>
+        <p>Participants in the group are required (by the <a href="https://www.w3.org/policies/process/#ParticipationCriteria">W3C Process</a>) to follow the
+          W3C <a href="https://www.w3.org/policies/code-of-conduct/">Code of Conduct</a>.</p>
+      </section>
+
+      <section id="communication">
+        <h2>
+          Communication
+        </h2>
+        <p id="public">
+          Technical discussions for this Working Group are conducted in <a href="https://www.w3.org/policies/process/#confidentiality-levels">public</a>: the meeting minutes from teleconference and face-to-face meetings will be archived for public review, and technical discussions and issue tracking will be conducted in a manner that can be both read and written to by the general public. Working Drafts and Editor's Drafts of specifications will be developed in public repositories and may permit direct public contribution requests.
+          The meetings themselves are not open to public participation, however.
+        </p>
+        <p>
+          Information about the group (including details about deliverables, issues, actions, status, participants, and meetings) will be available from the <a href="https://www.w3.org/groups/wg/browser-tools-testing/">Browser Testing and Tools Working Group home page.</a>
+        </p>
+        <p>
+          Most Browser Testing and Tools Working Group teleconferences will focus on discussion of particular specifications, and will be conducted on an as-needed basis.
+        </p>
+        <p>
+          This group primarily conducts its technical work in its GitHub repositories:
+        </p>
+        <ul>
+          <li><a href="https://github.com/w3c/webdriver">WebDriver spec repo</a></li>
+          <li><a href="https://github.com/w3c/webdriver-bidi">WebDriver BiDi spec repo</a></li>
+          <li><a href="https://github.com/w3c/at-driver">AT-Driver spec repo</a></li>
+        </ul>
+        <p>
+          The public is invited to review, discuss and contribute to this work.
+        </p>
+        <p>
+          The group may use a <a href="https://www.w3.org/policies/process/#Member-only">Member-only</a> mailing list for administrative purposes and, at the discretion of the Chairs and members of the group, for member-only discussions in special cases when a participant requests such a discussion.
+        </p>
+      </section>
+
+      <section id="decisions">
+        <h2>
+          Decision Policy
+        </h2>
+        <p>
+          This group will seek to make decisions through consensus and due process, per the <a href="https://www.w3.org/policies/process/#Consensus">W3C Process Document (section 5.2.1, Consensus)</a>. Typically, an editor or other participant makes an initial proposal, which is then refined in discussion with members of the group and other reviewers, and consensus emerges with little formal voting being required.</p>
+        <p>
+           However, if a decision is necessary for timely progress and consensus is not achieved after careful consideration of the range of views presented, the Chairs may call for a group vote and record a decision along with any objections.
+        </p>
+        <p>
+          To afford asynchronous decisions and organizational deliberation, any resolution (including publication decisions) taken in a face-to-face meeting or teleconference will be considered provisional.
+
+          A call for consensus (CfC) will be issued for all resolutions (for example, via email, GitHub issue or web-based survey), with a response period from <span id="cfc">one week to 10 working days</span>, depending on the chair's evaluation of the group consensus on the issue.
+
+          If no objections are raised by the end of the response period, the resolution will be considered to have consensus as a resolution of the Working Group.
+        </p>
+        <p>
+          All decisions made by the group should be considered resolved unless and until new information becomes available or unless reopened at the discretion of the Chairs.
+        </p>
+        <p>
+          This charter is written in accordance with the <a href="https://www.w3.org/policies/process/#Votes">W3C Process Document (Section 5.2.3, Deciding by Vote)</a> and includes no voting procedures beyond what the Process Document requires.
+        </p>
+      </section>
+
+      <section id="patentpolicy">  
+        <h2>
+          Patent Policy
+        </h2>
+        <p>
+          This Working Group operates under the <a href="https://www.w3.org/policies/patent-policy/">W3C Patent Policy</a> (Version of 15 May 2025). To promote the widest adoption of Web standards, W3C seeks to issue Web specifications that can be implemented, according to this policy, on a Royalty-Free basis.
+
+          For more information about disclosure obligations for this group, please see the <a href="https://www.w3.org/groups/wg/browser-tools-testing/ipr/">licensing information</a>.
+        </p>
+      </section>
+
+      <section id="licensing">
+        <h2>Licensing</h2>
+        <p>This Working Group will use the <a href="https://www.w3.org/copyright/software-license/">W3C Software and Document license</a> for all its deliverables.</p>
+      </section>
+
+      <section id="about">
+        <h2>
+          About this Charter
+        </h2>
+        <p>
+          This charter has been created according to <a href="https://www.w3.org/policies/process/#GAGeneral">section 3.4</a> of the <a href="https://www.w3.org/policies/process/">Process Document</a>. In the event of a conflict between this document or the provisions of any charter and the W3C Process, the W3C Process shall take precedence.
+        </p>
+
+        <section id="history">
+          <h3>
+            Charter History
+          </h3>
+          <p>The following table lists details of all changes from the initial charter, per the <a href="https://www.w3.org/policies/process/#CharterReview">W3C Process Document (section 4.3, Advisory Committee Review of a Charter)</a>:</p>
+
+          <table class="history">
+            <tbody>
+              <tr>
+                <th>
+                  Charter Period
+                </th>
+                <th>
+                  Start Date
+                </th>
+                <th>
+                  End Date
+                </th>
+                <th>
+                  Changes
+                </th>
+              </tr>
+              <tr>
+                <th>
+                  Initial Charter
+                </th>
+                <td>
+                 <a href="https://www.w3.org/2011/08/browser-testing-charter">2011‑10‑13</a>
+                </td>
+                <td>
+                  2013‑12‑31
+                </td>
+                <td>
+                  No changes in scope or deliverables.
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  Charter Extension
+                </th>
+                <td>
+                  2013‑01‑01
+                </td>
+                <td>
+                  2015‑12‑31
+                </td>
+                <td>
+                  No changes in scope or deliverables.
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  Charter Extension
+                </th>
+                <td>
+                  2016‑01‑01
+                </td>
+                <td>
+                  2016‑03‑31
+                </td>
+                <td>
+                  No changes in scope or deliverables.
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  Rechartered
+                </th>
+                <td>
+                  <a href="https://www.w3.org/2016/05/browser-testing-tools-charter.html">2016‑05‑19</a>
+                </td>
+                <td>
+                  2017‑03‑31
+                </td>
+                <td>
+                  No changes in scope or deliverables.
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  Charter Extension
+                </th>
+                <td>
+                  2017‑04‑01
+                </td>
+                <td>
+                  2017‑09‑30
+                </td>
+                <td>
+                  No changes in scope or deliverables.
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  Charter Extension
+                </th>
+                <td>
+                  2017‑12‑01
+                </td>
+                <td>
+                  2018‑06‑30
+                </td>
+                <td>
+                  No changes in scope or deliverables.
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  Rechartered
+                </th>
+                <td>
+                  <a href="https://www.w3.org/2018/12/browser-testing-tools.html">2018‑12‑01</a>
+                </td>
+                <td>
+                  2020‑12‑31
+                </td>
+                <td>
+                  No changes in scope or deliverables.
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  Charter Extension
+                </th>
+                <td>
+                  2021‑01‑01
+                </td>
+                <td>
+                  2021‑03‑31
+                </td>
+                <td>
+                  No changes in scope or deliverables.
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  Rechartered
+                </th>
+                <td>
+                  <a href="https://www.w3.org/2021/08/bbtt-wg-charter.html">2021‑08‑10</a>
+                </td>
+                <td>
+                  2023‑08‑10
+                </td>
+                <td>WebDriver BiDi deliverable added.<br>
+                New Patent Policy 2020.
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  Charter Extension
+                </th>
+                <td>
+                  2023‑08‑11
+                </td>
+                <td>
+                  2024‑02-29
+                </td>
+                <td>
+                  No changes in scope or deliverables.
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  Rechartered
+                </th>
+                <td>
+                  <a href="https://www.w3.org/2024/btt-wg-charter.html">2024-07-09</a>
+                </td>
+                <td>
+                  2026-07-08
+                </td>
+                <td>
+                  AT Driver deliverable added.
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  Rechartered
+                </th>
+                <td>
+                  <a class="todo" href="#">[dd monthname yyyy] (date of the "Call for Participation", when the charter is approved)</a>
+                </td>
+                <td>
+                  <i class="todo">[dd monthname yyyy] (Start date + 2 years)</i>
+                </td>
+                <td>
+                  Content aligned with charter template. No changes in scope or deliverables.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="changelog">
+          <h3>Change log</h3>
+
+          <!-- Use this section for changes _after_ the charter was approved by the Director. -->
+          <p>Changes to this document are documented in this section.</p>
+          <!--
+          <dl id='changes'>
+            <dt>YYYY-MM-DD</dt>
+            <dd>[changes]]</dd>
+          </dl>
+          -->
+        </section>
+      </section>
+    </main>
+
+    <hr>
+    <footer>
+      <address>
+        <a class="" href="mailto:fd@w3.org">François Daoust</a>
+      </address>
+      <p class="copyright">Copyright © 2026 <a href="https://www.w3.org/">World Wide Web Consortium</a>.<br>
+        <abbr title="World Wide Web Consortium">W3C</abbr><sup>®</sup>
+        <a href="https://www.w3.org/policies/#disclaimers">liability</a>,
+        <a href="https://www.w3.org/policies/#trademarks">trademark</a> and
+            <a rel="license" href="https://www.w3.org/copyright/software-license/" title="W3C Software and Document Notice and License">permissive document license</a> rules apply.</p>
+      <hr>
+    </footer>
+  </body>
+</html>
