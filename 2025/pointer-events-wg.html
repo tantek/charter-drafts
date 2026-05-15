@@ -158,7 +158,6 @@
             <li>Addition of <a href="https://www.w3.org/TR/pointerevents3/#details-of-touch-action-values">direction-specific values for <code>touch-action</code></a>, giving finer-grained control of panning touch behaviors</li>
 			<li>Integrating mouse events and wheel events from the abandoned <a href="https://www.w3.org/TR/uievents/">UI Events</a> specification</li>
             <li>Clarifying relationship between pointer events and other pointer-related APIs, such as pointer lock and drag and drop</li>
-			<li>Support for basic gestures, such as "swipe", "scale", "rotate"</li>
             <li>Additional clarifications of API behavior and performance optimizations (see <a href="https://github.com/w3c/pointerevents/issues?q=is%3Aissue+is%3Aopen+label%3Av4">issues marked for future consideration in GitHub</a>)</li>
           </ul>
 
@@ -167,7 +166,7 @@
             <p>The following features are out of scope, and will not be addressed by this Working group.</p>
 
             <ul class="out-of-scope">
-              <li>How user agents determine if an interaction is intended to be a gesture. Examples include, but are not limited to, the following:
+              <li>Gestures. Examples of out-of-scope gesture functionality and APIs include, but are not limited to, the following:
                 <ul>
                   <li>Comparisons between multiple pointers to determine an action (e.g., panning for scrollable regions, pinch for zooming, press-and-hold for a mouse right-click).</li>
                   <li>Comparisons between time stamps of pointers to determine an action.</li>
@@ -665,8 +664,7 @@ interoperability can be verified by passing open test suites. In order to advanc
                   TBD+2 years
                 </td>
                 <td>
-                  Make it more explicitly that mouse events are in scope.<br>
-                  Scope expanded to include simplified basic high-level gestures for common interaction
+                  Make it more explicitly that mouse events are in scope.
                 </td>
               </tr>
             </tbody>
