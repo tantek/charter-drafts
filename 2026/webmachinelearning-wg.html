@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en-US"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Machine Learning Working Group Charter</title>
+    <link rel="stylesheet" type="text/css" href="https://www.w3.org/2026/01/charter-style.css">
+  <meta name="generator" content="w3c-charter-assistant"><script type="application/json" id="charter-assistant-settings">{
+  "group": "wg/webmachinelearning",
+  "workMode": "rec",
+  "a11y-impact": "true",
+  "template": {
+    "sha": "b43b4eb5f52bb0fee2beeb8e98f8266e9ef6ad77",
+    "date": "2026-01-29T10:38:13Z"
+  },
+  "timeStamp": "2026-06-09T15:55:26.244Z"
+}</script><script src="https://www.w3.org/PM/Groups/lib/check-charter.js" type="module" id="charter-assistant-checker"></script></head>
+  <body>
+    <header id="header">
+      <aside>
+        <ul id="navbar">
+          <li><a href="#background">Background</a></li>
+          <li><a href="#scope">Scope</a></li>
+          <li><a href="#deliverables">Deliverables</a></li>
+		      <li><a href="#success-criteria">Success Criteria</a></li>
+          <li><a href="#coordination">Coordination</a></li>
+          <li><a href="#participation">Participation</a></li>
+          <li><a href="#communication">Communication</a></li>
+          <li><a href="#decisions">Decision Policy</a></li>
+          
+          <li><a href="#patentpolicy">Patent Policy</a></li>
+          <li></li>
+          <li><a href="#licensing">Licensing</a></li>
+          <li><a href="#about">About this Charter</a></li>
+        </ul>
+      </aside>
+      <p>
+        <a href="https://www.w3.org/"><img alt="W3C" height="120" src="https://www.w3.org/assets/logos/w3c-2025/svg/w3c.svg" width="120"></a>
+      </p>
+    </header>
+
+
+    <main>
+      <h1 id="title"><i class="todo">DRAFT</i> Web Machine Learning Working Group Charter</h1>
+      <!-- replace DRAFT with PROPOSED when the AC review starts -->
+      <!-- delete PROPOSED after AC review completed -->
+
+    
+
+    <p class="mission">The <strong>mission</strong> of the <a href="https://www.w3.org/groups/wg/webmachinelearning/">Web Machine Learning Working Group</a> is to develop APIs for enabling efficient machine learning inference in the browser.</p>
+      <!-- the link to the group is ALWAYS that available from https://www.w3.org/groups/wg or https://www.w3.org/groups/ig because each group page can then point to a different homepage, but not the other way around. -->
+
+      <div class="noprint">
+        <p class="join"><a href="https://www.w3.org/groups/wg/webmachinelearning/join/">Join the Web Machine Learning Working Group.</a></p>
+      </div>
+
+      <!-- replace "draft charter" with "proposed charter" when the AC review starts -->
+      <!-- replace GitHub link and issues link to the specific charter in GH and its issues repo -->
+      <!-- delete the whole paragraph after AC review completed -->
+      <p class="issue"> This proposed charter is available
+      on <a href="https://github.com/w3c/charter-drafts/">GitHub</a>.
+
+    Feel free to raise <a href="https://github.com/w3c/charter-drafts/issues?q=is%3Aissue%20state%3Aopen%20webmachinelearning">issues</a>.
+          </p>
+
+      <div id="details">
+        <table class="summary-table">
+          <tbody><tr id="Status">
+            <th>
+              Charter Status
+            </th>
+            <td>
+              See the <a class="" href="https://www.w3.org/groups/wg/webmachinelearning/charters/">group status page</a> and <a href="#history">detailed change history</a>.
+            </td>
+          </tr>
+          <tr id="Duration">
+            <th>
+              Start date
+            </th>
+            <td>
+              <i class="todo">[dd monthname yyyy] (date of the "Call for Participation", when the charter is approved)</i>
+            </td>
+          </tr>
+          <tr id="CharterEnd">
+            <th>
+              End date
+            </th>
+            <td>
+              <i class="todo">[dd monthname yyyy]</i> (Start date + 2 years)
+            </td>
+          </tr>
+          <tr id="Chairs">
+            <th>
+              Chairs
+            </th>
+            <td>Anssi Kostiainen (Intel Corporation)</td>
+          </tr>
+          <tr id="TeamContacts">
+            <th>
+              Team Contacts
+            </th>
+            <td><a class="todo" href="mailto:###@w3.org">###</a> (0.1 <abbr title="Full-Time Equivalent">FTE</abbr>)</td>
+          </tr>
+          <tr id="MeetingSchedule">
+            <th>
+              Meeting Schedule
+            </th>
+            <td>
+              <strong>Teleconferences:</strong> bi-weekly
+              <br>
+              <strong>Face-to-face:</strong> we will meet during the W3C's annual Technical Plenary week; additional face-to-face meetings may be scheduled by consent of the participants, usually no more than 3 per year.
+              <br>
+              See also this <a class="" href="https://www.w3.org/groups/wg/webmachinelearning/calendar/">group calendar</a>
+            </td>
+          </tr>
+        </tbody></table>
+
+      </div>
+
+      <section id="background">
+        <h2>Motivation and Background</h2>
+        <p>
+          Computer Vision enables computers to gain understanding from images
+          or videos. Natural Language Processing enables interaction between
+          computers and human languages. Speech Recognition and Speech
+          Synthesis enable computers to recognize and translate spoken language
+          into text and vice versa.
+          Bringing these experiences to the web in a privacy-preserving manner
+          requires efficient machine learning inference capabilities built into
+          the browser.
+        </p>
+        <p>Enabling Machine Learning inference in
+          the browser (as opposed e.g. to in the cloud) enhances privacy, since input
+          data such as locally sourced images or video streams stay within the
+          browser's sandbox. Local processing also enables machine learning use
+          cases that require low latency, such as object detection in real-time
+	  communications and immersive web experiences.
+        </p><p>
+          Currently, machine learning inference in the browser uses WebAssembly
+	  and the WebGL
+          graphics API with limited or no access to platform capabilities
+          beneficial for ML such as CPU parallelism, general-purpose GPU, or
+          dedicated ML hardware accelerators.
+        </p>
+
+      </section>
+
+      <section id="scope" class="scope">
+        <h2>
+          Scope
+        </h2>
+        <p>
+          The Web Machine Learning Working Group develops a Web API aiming to expose generic capabilities to the Web
+          required to provide close-to-native machine learning performance in
+          the browser. 
+          This Web API for neural network inference hardware acceleration:
+        </p>
+        <ul>
+          <li>Allows construction of a neural network computational graph by common
+          building blocks required by well-known model architectures: constant
+          values and base operations such as convolution, pooling, softmax,
+          normalization, fully connected, and activation;
+          </li>
+          <li>Allows compilation of the neural network to native optimized format
+          for hardware execution;
+          </li>
+          <li>Allows input to be set up from various sources on the Web, e.g. array
+          buffers and media streams, schedule the asynchronous hardware execution,
+          and retrieve the output when hardware execution completes.
+          </li>
+        </ul>
+        <p>
+          This Working Group puts priority on building blocks required by
+          well-known model architectures such as recurrent neural network
+          (RNN), long short-term memory (LSTM) and transformers in the fields
+          of Computer Vision, Natural Language Processing and Speech
+          Recognition.
+        </p>
+        <p>
+          The APIs in scope of this group are not tied to any particular
+          platform and are implementable on top of existing major platform
+          APIs, such as Android Neural Networks API, Windows DirectML, and
+          macOS/iOS Core ML and Basic Neural Network Subroutines.
+        </p>
+        <p>
+          For each high-level building block that decomposes into well-known
+          lower-level operations, the APIs will informatively define a generic
+          emulation path to allow for future extensibility.
+        </p>
+        <p>The Working Group may also work on a higher-level API to load a custom pre-trained Machine Learning model for inference in the browser.</p>
+        <section id="section-out-of-scope">
+          <h3 id="out-of-scope">
+            Out of Scope
+          </h3>
+          <p>
+            The scope is limited to development of interfaces that expose
+            inference capabilities of the modern platforms beneficial or
+            purpose-built for ML. Training capabilities are out of scope due to
+            limited availability of respective platform APIs.
+          </p>
+          <p>
+            This Working Group will not define any hardware features or
+            algorithms.
+          </p>
+          <p>
+            To avoid overlap with existing work, alignment with the Basic
+            Linear Algebra Subprograms (BLAS) interface is out of scope. The
+            WebGPU shaders and WebAssembly SIMD are expected to address the
+            BLAS compatibility requirement, see the <a href="#coordination">Coordination section</a> for
+            details.
+          </p>
+          <p>
+            Integration between the WebNN and WebGL APIs is out of scope, as the group focuses its efforts on integration with WebGPU APIs.
+          </p>
+        </section>
+      </section>
+
+      <section id="deliverables">
+        <h2>
+          Deliverables
+        </h2>
+
+        <p>Updated document status is available on the <a href="https://www.w3.org/groups/wg/webmachinelearning/publications/">group publication status page</a>.</p>
+
+        <p id="draft-state"><i>Draft state</i> indicates the state of the deliverable at the time of the charter approval. <i>Expected completion</i> indicates when the deliverable is projected to become a Recommendation.</p>
+
+        <section id="normative">
+          <h3>
+            Normative Specifications
+          </h3>
+          <p>
+            The Working Group will deliver the following W3C normative specifications:
+          </p>
+          
+          <!--  https://www.w3.org/groups/wg/webmachinelearning/deliverables/ -->
+          <dl data-timestamp="2026-06-09T15:55:26.243Z">
+                                            <dt id="webnn" class="spec"><a href="https://www.w3.org/TR/webnn/" rel="versionof">Web Neural Network API</a></dt>
+                        <dd>
+                            <p>This document describes a dedicated low-level API for neural network inference hardware acceleration.</p>
+                            <p><b>Draft state:</b> </p>
+                            <p><b>Expected completion:</b> Q1 2027</p>
+                            <p><b>Latest publication:</b> <a href="https://www.w3.org/TR/2026/CRD-webnn-20260521/">2026-05-21</a></p>
+                            <p><b>Exclusion Draft:</b>
+                                <a href="https://www.w3.org/TR/2026/CR-webnn-20260122/">https://www.w3.org/TR/2026/CR-webnn-20260122/</a><br>
+                                <a href="https://www.w3.org/mid/cfe-16534-d676d74db9edb66797487339610bbdfd26e6b730@w3.org">Exclusion period</a>
+                                began on 2026-01-22 and
+                                ended on 2026-03-23.
+                            </p>
+                            <p><b>Exclusion Draft Charter</b>: Produced under Working Group Charter:
+                                                                    <a href="https://www.w3.org/2025/03/webmachinelearning-charter.html">https://www.w3.org/2025/03/webmachinelearning-charter.html</a>                                                            </p>
+                        </dd>
+                                        </dl>
+
+
+        </section>
+
+        <section id="incubation">
+          <h3>
+            Tentative Deliverables
+          </h3>
+          <p>Depending on the <a href="https://www.w3.org/guide/incubation.html">incubation</a> progress, interest from multiple implementers, and the consensus
+            of the Group participants, the Working Group may adopt the following documents
+             as Rec-track specifications:</p>
+          <dl>
+            <dt id="web-incubated-foo" class="spec"><a href="#">Web <i class="todo">[spec name]</i></a></dt>
+            <dd>
+              <p>This specification defines <i class="todo">[concrete description]</i>.</p>
+              <p class="draft-status"><b>Draft state:</b>
+                Proposal in <a href=""><i class="todo">[other name]</i> Community Group</a></p>
+            </dd>
+          </dl>
+        </section>
+
+        <section id="other-deliverables">
+          <h3>
+            Other Deliverables
+          </h3>
+          <p>
+            Other non-normative documents may be created such as:
+          </p>
+          <ul>
+            <li>Use case and requirement documents;</li>
+            <li>Test suite and implementation report for the specification;</li>
+            <li>Primer or Best Practice documents to support web developers when designing applications.</li>
+          </ul>
+        </section>
+
+        <section id="timeline">
+          <h3>Timeline</h3>
+            <ul>
+        	    <li>Q1 2027: Recommendation for WebNN</li>
+            </ul>
+        </section>
+      </section>
+
+	<section id="success-criteria">
+	  <h2>Success Criteria</h2>
+
+    <!-- Testing and interop -->
+	  <p>In order to advance beyond
+		  <a href="https://www.w3.org/policies/process/#RecsCR" title="Candidate Recommendation">Candidate Recommendation</a>, each normative specification is expected to have
+		  <a href="https://www.w3.org/policies/process/#implementation-experience">at least two independent interoperable
+			  implementations</a> of every feature defined in the specification, where
+interoperability can be verified by passing open test suites. In order to advance beyond Candidate Recommendation, each normative specification must have an open test suite of every feature defined in the specification.</p>
+	  <p>There should be testing plans for each specification, starting from the earliest drafts.</p>
+    <p>
+      To promote interoperability, all changes made to specifications
+      in Candidate Recommendation
+      or to features that have deployed implementations
+      should have <a href="https://www.w3.org/policies/testing/">tests</a>.
+      Testing efforts should be conducted via the <a href="https://github.com/web-platform-tests/wpt">Web Platform Tests</a> project.</p>
+
+    <!-- Horizontal review -->
+
+    <p>Each specification should contain separate sections detailing all known security and
+      privacy implications for implementers, Web authors, and users.</p>
+
+	  <p id="a11y-section">
+		Each specification should contain a section on accessibility that describes the benefits and impacts, including ways specification features can be used to address them, and
+		recommendations for maximising accessibility in implementations.</p>
+
+    <!-- W3C Statements and Web Platform Design Principles -->
+    <p>This group is expected to be guided by the following documents:</p>
+    <ul>
+      <li><a href="https://www.w3.org/TR/ethical-web-principles/">Ethical Web Principles</a>,</li>
+      <li><a href="https://www.w3.org/TR/privacy-principles/">Privacy Principles</a>,</li>
+      <li><a href="https://www.w3.org/TR/design-principles/">Web Platform Design Principles</a>.</li>
+    </ul>
+	</section>
+
+      <section id="coordination">
+        <h2>Coordination</h2>
+        
+        <p>For all specifications, this Working Group will seek <a href="https://www.w3.org/guide/documentreview/#how-to-get-horizontal-review">horizontal review</a> for
+        accessibility, internationalization, privacy, and security with the relevant Working and
+        Interest Groups, and with the <a href="https://www.w3.org/groups/other/tag/" title="Technical Architecture Group">TAG</a>.
+        Invitation for review must be issued during each major standards-track document transition, including
+        <a href="https://www.w3.org/policies/process/#RecsWD" title="First Public Working Draft">FPWD</a>.  The
+        Working Group is encouraged to engage collaboratively with the horizontal review groups throughout development of
+        each specification.  The Working Group is advised to seek a review at least 3 months before first entering
+        <a href="https://www.w3.org/policies/process/#RecsCR" title="Candidate Recommendation">CR</a> and is encouraged
+        to proactively notify the horizontal review groups when major changes occur in a specification following a review.</p>
+
+        
+        
+
+
+        <p>Additional technical coordination with the following Groups will be made, per the <a href="https://www.w3.org/policies/process/#WGCharter">W3C Process Document</a>:</p>
+
+        <section>
+          
+          
+
+          
+          
+        <h3 id="w3c-coordination">
+            W3C Groups
+          </h3><dl>
+            <dt>
+              <a href="https://www.w3.org/groups/cg/webmachinelearning/">Web Machine Learning Community Group</a>
+            </dt>
+            <dd>
+              The Web Machine Learning Community Group developed the
+              Web Neural Network API adopted by this Working Group. It is
+              expected that the Community Group will continue drive technical
+              work around other specifications in its scope. This Working Group
+              will work with the Web Machine Learning Community Group
+              on shaping the <a href="#tentative">Tentative Specifications</a>
+              being worked on in the Community Group for the Recommendation
+              track.
+            </dd>
+            <dt>
+              <a href="https://www.w3.org/groups/wg/gpu/">GPU for the Web Working Group</a>
+            </dt>
+            <dd>
+              The GPU for the Web Working Group defines access to GPU devices with the <a href="https://www.w3.org/TR/webgpu/">WebGPU API</a>, and a <a href="https://www.w3.org/TR/WGSL/">WebGPU Shading
+              Language</a> that may be used to implement traditional machine
+              learning algorithms efficiently. The Web Machine Learning Working
+              Group will coordinate with this group to avoid overlap and
+              to ensure proper integration of WebNN with WebGPU APIs.
+            </dd>
+            <dt>
+              <a href="https://www.w3.org/groups/cg/webassembly/">WebAssembly Community Group</a>
+            </dt>
+            <dd>
+              The WebAssembly Community Group incubates a proposal for a
+              128-bit SIMD support in WebAssembly that can be used to implement
+              traditional machine learning algorithms efficiently. The Web
+              Machine Learning Working Group will coordinate with this group
+              to avoid overlap.
+            </dd>
+            <dt><a href="https://www.w3.org/groups/wg/webrtc/">Web Real-Time Communications Working Group</a></dt>
+            <dd>
+              The WebRTC Working Group defines the <code>MediaStream</code>
+              interface and related media processing APIs that enable integration
+              with Machine Learning capabilities afforded by the WebNN API.
+            </dd>
+            <dt><a href="https://www.w3.org/groups/other/tag/">Technical Architecture Group</a></dt>
+            <dd>Given the well-known ethical risks of bias in the use of Machine Learning, the Web Machine Learning Working Group will work with the Technical Architecture Group to ensure its work align with the <a href="https://w3ctag.github.io/ethical-web-principles/">W3C TAG Ethical Web Principles</a>.</dd>
+          </dl></section>
+
+        <section>
+          
+          
+        <h3 id="external-coordination">
+            External Organizations
+          </h3><dl>
+            <dt><a href="https://tc39.es/">ECMA TC39</a></dt>
+            <dd>TC39 defines the JavaScript language whose primitives are key in how WebNN accesses data (e.g. <code>ArrayBuffer</code>). Possible work on <a href="https://github.com/tc39/proposal-operator-overloading#matrixvector-computations">operator overloading</a> would also impact possible evolutions of the WebNN API.</dd>
+          </dl></section>
+      </section>
+
+      <section class="participation">
+        <h2 id="participation">
+          Participation
+        </h2>
+        <p>
+          To be successful, this Working Group is expected to have 6 or more active participants for its duration, including representatives from the key implementors of this specification, and active Editors and Test Leads for each specification. The Chairs, specification Editors, and Test Leads are expected to contribute half of a working day per week towards the Working Group. There is no minimum requirement for other Participants.
+        </p>
+        <p>
+          The group encourages questions, comments and issues on its public mailing lists and document repositories, as described in <a href="#communication">Communication</a>. The group also welcomes non-participants to make technical contributions for ongoing work, provided they agree to the terms of the <a href="https://www.w3.org/policies/patent-policy/">W3C Patent Policy</a>.
+        </p>
+        <p>
+          The Chairs should periodically look through the non-W3C-Member contributors to the 
+          <a href="https://www.w3.org/groups/cg/webmachinelearning/">Web Machine Learning Community Group</a> and consider whether each one should be invited to participate as an <a href="https://www.w3.org/invited-experts/">Invited Expert</a>. If a non-W3C-Member contributor would like to participate in meetings, they are encouraged to <a href="https://www.w3.org/groups/wg/webmachinelearning/instructions/">apply to be an Invited Expert</a>.
+        </p>
+        <p>Participants in the group are required (by the <a href="https://www.w3.org/policies/process/#ParticipationCriteria">W3C Process</a>) to follow the
+          W3C <a href="https://www.w3.org/policies/code-of-conduct/">Code of Conduct</a>.</p>
+      </section>
+
+      <section id="communication">
+        <h2>
+          Communication
+        </h2>
+        <p id="public">
+          Technical discussions for this Working Group are conducted in <a href="https://www.w3.org/policies/process/#confidentiality-levels">public</a>: the meeting minutes from teleconference and face-to-face meetings will be archived for public review, and technical discussions and issue tracking will be conducted in a manner that can be both read and written to by the general public. Working Drafts and Editor's Drafts of specifications will be developed in public repositories and may permit direct public contribution requests.
+        The meetings themselves are not open to public participation, however.
+        </p>
+        <p>
+          Information about the group (including details about deliverables, issues, actions, status, participants, and meetings) will be available from the <a href="https://www.w3.org/groups/wg/webmachinelearning/">Web Machine Learning Working Group home page.</a>
+        </p>
+        <p>
+          Most Web Machine Learning Working Group teleconferences will focus on discussion of particular specifications, and will be conducted on an as-needed basis.
+        </p>
+        <p>
+          This group primarily conducts its technical work on <a class="" id="public-github" href="https://www.w3.org/groups/wg/webmachinelearning/tools/#repositories">GitHub issues</a>.
+          The public is invited to review, discuss and contribute to this work.
+        </p>
+        <p>
+          The group may use a <a href="https://www.w3.org/policies/process/#Member-only">Member-only</a> mailing list for administrative purposes and, at the discretion of the Chairs and members of the group, for member-only discussions in special cases when a participant requests such a discussion.
+        </p>
+      </section>
+
+
+
+      <section id="decisions">
+        <h2>
+          Decision Policy
+        </h2>
+        <p>
+          This group will seek to make decisions through consensus and due process, per the <a href="https://www.w3.org/policies/process/#Consensus">W3C Process Document (section 5.2.1, Consensus)</a>. Typically, an editor or other participant makes an initial proposal, which is then refined in discussion with members of the group and other reviewers, and consensus emerges with little formal voting being required.</p>
+        <p>
+           However, if a decision is necessary for timely progress and consensus is not achieved after careful consideration of the range of views presented, the Chairs may call for a group vote and record a decision along with any objections.
+        </p>
+        <p>
+          To afford asynchronous decisions and organizational deliberation, any resolution (including publication decisions) taken in a face-to-face meeting or teleconference will be considered provisional.
+
+          A call for consensus (CfC) will be issued for all resolutions (for example, via email, GitHub issue or web-based survey), with a response period from <span id="cfc">one week to 10 working days</span>, depending on the chair's evaluation of the group consensus on the issue.
+
+          If no objections are raised by the end of the response period, the resolution will be considered to have consensus as a resolution of the Working Group.
+        </p>
+        <p>
+          All decisions made by the group should be considered resolved unless and until new information becomes available or unless reopened at the discretion of the Chairs.
+        </p>
+        <p>
+          This charter is written in accordance with the <a href="https://www.w3.org/policies/process/#Votes">W3C Process Document (Section 5.2.3, Deciding by Vote)</a> and includes no voting procedures beyond what the Process Document requires.
+        </p>
+      </section>
+
+
+
+      <section id="patentpolicy">
+      
+
+        <h2>
+          Patent Policy
+        </h2>
+        <p>
+          This Working Group operates under the <a href="https://www.w3.org/policies/patent-policy/">W3C Patent Policy</a> (Version of 15 May 2025). To promote the widest adoption of Web standards, W3C seeks to issue Web specifications that can be implemented, according to this policy, on a Royalty-Free basis.
+
+          For more information about disclosure obligations for this group, please see the <a href="https://www.w3.org/groups/wg/webmachinelearning/ipr/">licensing information</a>.
+        </p>
+
+        
+        
+      </section>
+
+
+
+      <section id="licensing">
+        <h2>Licensing</h2>
+        <p>This Working Group will use the <a href="https://www.w3.org/copyright/software-license/">W3C Software and Document license</a> for all its deliverables.</p>
+      </section>
+
+
+
+      <section id="about">
+        <h2>
+          About this Charter
+        </h2>
+        <p>
+          This charter has been created according to <a href="https://www.w3.org/policies/process/#GAGeneral">section 3.4</a> of the <a href="https://www.w3.org/policies/process/">Process Document</a>. In the event of a conflict between this document or the provisions of any charter and the W3C Process, the W3C Process shall take precedence.
+        </p>
+
+        <section id="history">
+          <h3>
+            Charter History
+          </h3>
+          <p class="issue"><b>Note:</b>Display this table and update it when appropriate. Requirements for charter extension history are documented in the <a href="https://www.w3.org/Guide/process/charter.html#extension">Charter Guidebook (section 4)</a>.</p>
+
+          <p>The following table lists details of all changes from the initial charter, per the <a href="https://www.w3.org/policies/process/#CharterReview">W3C Process Document (section 4.3, Advisory Committee Review of a Charter)</a>:</p>
+
+          <table class="history">
+            <tbody>
+              <tr>
+                <th>
+                  Charter Period
+                </th>
+                <th>
+                  Start Date
+                </th>
+                <th>
+                  End Date
+                </th>
+                <th>
+                  Changes
+                </th>
+              </tr>
+              <tr>
+                <th>
+                  <a href="https://www.w3.org/2021/04/web-machine-learning-charter.html">Initial Charter</a>
+                </th>
+                <td>
+                  2021-04-20
+                </td>
+                <td>
+                  2023-04-30
+                </td>
+                <td>
+                  Initial charter
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  Second charter
+                </th>
+                <td>
+                  2023-04-06
+                </td>
+                <td>
+                  2025-04-30
+                </td>
+                <td>
+                  Update to latest status of work and charter template
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  This charter
+                </th>
+                <td>
+                  2025-03-10
+                </td>
+                <td>
+                  2027-04-30
+                </td>
+                <td>
+                  Update to latest status of work (removing tentative deliverable on model loader API) and charter template
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="changelog">
+          <h3>Change log</h3>
+
+          <!-- Use this section for changes _after_ the charter was approved by the Director. -->
+          <p>Changes to this document are documented in this section.</p>
+          <!--
+          <dl id='changes'>
+            <dt>YYYY-MM-DD</dt>
+            <dd>[changes]]</dd>
+          </dl>
+          -->
+        </section>
+      </section>
+    </main>
+
+    <hr>
+
+    <footer>
+      <address>
+        <a class="" href="mailto:dom@w3.org">Dominique Hazaël-Massieux</a>
+      </address>
+
+<p class="copyright">Copyright © 2026 <a href="https://www.w3.org/">World Wide Web Consortium</a>.<br>
+  <abbr title="World Wide Web Consortium">W3C</abbr><sup>®</sup>
+  <a href="https://www.w3.org/policies/#disclaimers">liability</a>,
+  <a href="https://www.w3.org/policies/#trademarks">trademark</a> and
+      <a rel="license" href="https://www.w3.org/copyright/software-license/" title="W3C Software and Document Notice and License">permissive document license</a> rules apply.</p>
+
+      <hr>
+      
+    </footer>
+
+  
+
+</body></html>
